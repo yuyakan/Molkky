@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm /Users/uebetsunawayuuya/Molky/Molky/Item.swift /Users/uebetsunawayuuya/Molky/Molky/ContentView.swift)",
+      "Bash(mkdir -p /Users/uebetsunawayuuya/Molky/Molky/Engine /Users/uebetsunawayuuya/Molky/Molky/Models /Users/uebetsunawayuuya/Molky/Molky/Stores /Users/uebetsunawayuuya/Molky/Molky/Features/Home /Users/uebetsunawayuuya/Molky/Molky/Features/NewGame /Users/uebetsunawayuuya/Molky/Molky/Features/InPlay /Users/uebetsunawayuuya/Molky/Molky/Features/Result /Users/uebetsunawayuuya/Molky/Molky/Features/Members /Users/uebetsunawayuuya/Molky/Molky/Features/History /Users/uebetsunawayuuya/Molky/Molky/Features/Settings /Users/uebetsunawayuuya/Molky/Molky/DesignSystem /Users/uebetsunawayuuya/Molky/MolkyTests/EngineTests)",
+      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -destination 'generic/platform=iOS Simulator' -configuration Debug -quiet build)"
+    ]
+  }
+}
