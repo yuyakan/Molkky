@@ -13,7 +13,7 @@ struct PersistedParticipant: Codable, Identifiable, Hashable {
 
     var displayName: String {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
-        return trimmed.isEmpty ? "未登録" : trimmed
+        return trimmed.isEmpty ? String(localized: "未登録") : trimmed
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -61,7 +61,7 @@ struct PersistedTeam: Codable, Identifiable, Hashable {
     private func defaultLetterName(forTurnIndex i: Int) -> String {
         let letters = ["A", "B", "C", "D", "E", "F"]
         let label = letters.indices.contains(i) ? letters[i] : "\(i + 1)"
-        return "\(label)チーム"
+        return String(localized: "\(label)チーム")
     }
 
     private enum CodingKeys: String, CodingKey {

@@ -203,7 +203,14 @@ struct ResultView: View {
             } label: {
                 HStack(spacing: 8) {
                     Image(systemName: "arrow.clockwise")
-                    Text(game.mode == .team ? "同チームで再戦" : "再戦").font(.system(.headline, design: .rounded).weight(.heavy))
+                    Group {
+                        if game.mode == .team {
+                            Text("同チームで再戦")
+                        } else {
+                            Text("再戦")
+                        }
+                    }
+                    .font(.system(.headline, design: .rounded).weight(.heavy))
                 }
             }
             .buttonStyle(PrimaryActionStyle())

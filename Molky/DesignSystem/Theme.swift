@@ -275,7 +275,7 @@ struct TicketCard<Content: View>: View {
 /// セクション見出し（数字番号付き）
 struct SectionHeader: View {
     let number: Int
-    let title: String
+    let title: LocalizedStringKey
     var trailing: AnyView? = nil
     private var isPad: Bool { UIDevice.isPad }
     var body: some View {

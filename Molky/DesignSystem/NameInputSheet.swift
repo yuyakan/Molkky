@@ -2,9 +2,9 @@ import SwiftUI
 
 /// iPad で使う名前入力シート。iPhone は引き続き `.alert` を使う想定。
 struct NameInputSheet: View {
-    let title: String
-    let placeholder: String
-    let confirmLabel: String
+    let title: LocalizedStringKey
+    let placeholder: LocalizedStringKey
+    let confirmLabel: LocalizedStringKey
     let onConfirm: (String) -> Void
     let onCancel: () -> Void
 
@@ -12,9 +12,9 @@ struct NameInputSheet: View {
     @FocusState private var focused: Bool
 
     init(
-        title: String,
-        placeholder: String = "名前",
-        confirmLabel: String = "追加",
+        title: LocalizedStringKey,
+        placeholder: LocalizedStringKey = "名前",
+        confirmLabel: LocalizedStringKey = "追加",
         onConfirm: @escaping (String) -> Void,
         onCancel: @escaping () -> Void
     ) {
@@ -98,11 +98,11 @@ extension View {
     /// `text` は呼び出し側で `@State` として保持する一時バッファ。
     /// 「追加」が押されたら `onConfirm` が呼ばれ、`text` の trim 後の値が渡される。
     func nameInputAlert(
-        title: String,
+        title: LocalizedStringKey,
         isPresented: Binding<Bool>,
         text: Binding<String>,
-        placeholder: String = "名前",
-        confirmLabel: String = "追加",
+        placeholder: LocalizedStringKey = "名前",
+        confirmLabel: LocalizedStringKey = "追加",
         onConfirm: @escaping (String) -> Void
     ) -> some View {
         modifier(
@@ -119,11 +119,11 @@ extension View {
 }
 
 private struct NameInputAlertModifier: ViewModifier {
-    let title: String
+    let title: LocalizedStringKey
     @Binding var isPresented: Bool
     @Binding var text: String
-    let placeholder: String
-    let confirmLabel: String
+    let placeholder: LocalizedStringKey
+    let confirmLabel: LocalizedStringKey
     let onConfirm: (String) -> Void
 
     private var isPad: Bool { UIDevice.isPad }

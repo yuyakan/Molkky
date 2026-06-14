@@ -178,9 +178,15 @@ struct TeamsView: View {
         let names = t.memberIds.compactMap { id in members.first(where: { $0.id == id })?.name }
         return HStack(spacing: Theme.Space.m) {
             VStack(alignment: .leading, spacing: 2) {
-                Text(t.name.isEmpty ? "未命名チーム" : t.name)
-                    .font(.system(.headline, design: .rounded).weight(.heavy))
-                    .foregroundStyle(Theme.ink)
+                Group {
+                    if t.name.isEmpty {
+                        Text("未命名チーム")
+                    } else {
+                        Text(t.name)
+                    }
+                }
+                .font(.system(.headline, design: .rounded).weight(.heavy))
+                .foregroundStyle(Theme.ink)
                 if names.isEmpty {
                     Text("メンバー未割当")
                         .font(.caption.weight(.semibold))
@@ -252,7 +258,7 @@ struct TeamDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear { try? modelContext.save() }
         .alert(
-            "\(team.name.isEmpty ? "このチーム" : team.name) を削除しますか？",
+            String(localized: "\(team.name.isEmpty ? String(localized: "このチーム") : team.name) を削除しますか？"),
             isPresented: $showDeleteConfirm
         ) {
             Button("削除", role: .destructive) {

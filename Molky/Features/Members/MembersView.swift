@@ -234,7 +234,7 @@ struct MemberDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear { try? modelContext.save() }
         .alert(
-            "\(member.name) を削除しますか？",
+            String(localized: "\(member.name) を削除しますか？"),
             isPresented: $showDeleteConfirm
         ) {
             Button("削除", role: .destructive) {
@@ -336,12 +336,18 @@ struct MemberDetailView: View {
                 .font(.system(.subheadline, design: .rounded).weight(.bold))
                 .foregroundStyle(Theme.ink)
             Spacer()
-            Text(g.mode == .team ? "チーム戦" : "個人戦")
-                .font(.system(.caption2, design: .rounded).weight(.heavy))
-                .padding(.horizontal, 6).padding(.vertical, 2)
-                .foregroundStyle(g.mode == .team ? Theme.berry : Theme.pine)
-                .background((g.mode == .team ? Theme.berry : Theme.pine).opacity(0.12))
-                .clipShape(Capsule())
+            Group {
+                if g.mode == .team {
+                    Text("チーム戦")
+                } else {
+                    Text("個人戦")
+                }
+            }
+            .font(.system(.caption2, design: .rounded).weight(.heavy))
+            .padding(.horizontal, 6).padding(.vertical, 2)
+            .foregroundStyle(g.mode == .team ? Theme.berry : Theme.pine)
+            .background((g.mode == .team ? Theme.berry : Theme.pine).opacity(0.12))
+            .clipShape(Capsule())
             Image(systemName: "chevron.right").foregroundStyle(Theme.ink.opacity(0.3))
         }
         .padding(Theme.Space.m)
@@ -350,9 +356,6 @@ struct MemberDetailView: View {
     }
 
     private func memberJpDate(_ d: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "ja_JP")
-        f.dateFormat = "M月d日(E) HH:mm"
-        return f.string(from: d)
+        d.formatted(.dateTime.month().day().weekday(.abbreviated).hour().minute())
     }
 }

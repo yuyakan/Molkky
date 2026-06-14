@@ -140,7 +140,7 @@ struct HomeView: View {
         }
     }
 
-    private func modeHeroCard(title: String, subtitle: String, icon: String, background: AnyShapeStyle, foreground: Color, badge: Color) -> some View {
+    private func modeHeroCard(title: LocalizedStringKey, subtitle: LocalizedStringKey, icon: String, background: AnyShapeStyle, foreground: Color, badge: Color) -> some View {
         ZStack(alignment: .topTrailing) {
             UnevenRoundedRectangle(
                 topLeadingRadius: Theme.Radius.xLarge,
@@ -216,7 +216,7 @@ struct HomeView: View {
         }
     }
 
-    private func menuTile(symbol: String, number: Int?, label: String, accent: Color) -> some View {
+    private func menuTile(symbol: String, number: Int?, label: LocalizedStringKey, accent: Color) -> some View {
         ZStack(alignment: .topTrailing) {
             UnevenRoundedRectangle(
                 topLeadingRadius: Theme.Radius.large,
@@ -347,9 +347,15 @@ struct HomeView: View {
                     }
                 }
             } else {
-                Text("\(count) \(g.mode == .team ? "チーム" : "人")参加 · 未完了")
-                    .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.semibold))
-                    .foregroundStyle(Theme.textSecondary)
+                Group {
+                    if g.mode == .team {
+                        Text("\(count) チーム参加 · 未完了")
+                    } else {
+                        Text("\(count) 人参加 · 未完了")
+                    }
+                }
+                .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.semibold))
+                .foregroundStyle(Theme.textSecondary)
             }
 
             HStack(spacing: 4) {
@@ -401,9 +407,6 @@ struct HomeView: View {
     }
 
     private func homeJpDate(_ d: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "ja_JP")
-        f.dateFormat = "M月d日(E) HH:mm"
-        return f.string(from: d)
+        d.formatted(.dateTime.month().day().weekday(.abbreviated).hour().minute())
     }
 }

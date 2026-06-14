@@ -3,7 +3,13 @@
     "allow": [
       "Bash(rm /Users/uebetsunawayuuya/Molky/Molky/Item.swift /Users/uebetsunawayuuya/Molky/Molky/ContentView.swift)",
       "Bash(mkdir -p /Users/uebetsunawayuuya/Molky/Molky/Engine /Users/uebetsunawayuuya/Molky/Molky/Models /Users/uebetsunawayuuya/Molky/Molky/Stores /Users/uebetsunawayuuya/Molky/Molky/Features/Home /Users/uebetsunawayuuya/Molky/Molky/Features/NewGame /Users/uebetsunawayuuya/Molky/Molky/Features/InPlay /Users/uebetsunawayuuya/Molky/Molky/Features/Result /Users/uebetsunawayuuya/Molky/Molky/Features/Members /Users/uebetsunawayuuya/Molky/Molky/Features/History /Users/uebetsunawayuuya/Molky/Molky/Features/Settings /Users/uebetsunawayuuya/Molky/Molky/DesignSystem /Users/uebetsunawayuuya/Molky/MolkyTests/EngineTests)",
-      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -destination 'generic/platform=iOS Simulator' -configuration Debug -quiet build)"
+      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -destination 'generic/platform=iOS Simulator' -configuration Debug -quiet build)",
+      "Bash(DEVELOPER_DIR=/Applications/Xcode-26.3.0.app/Contents/Developer xcodebuild -project /Users/uebetsunawayuuya/Molky/Molky.xcodeproj -scheme Molky -destination 'generic/platform=iOS Simulator' -configuration Debug build)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(xcrun simctl *)",
+      "Bash(DEVELOPER_DIR=/Applications/Xcode-26.3.0.app/Contents/Developer xcrun simctl list devices booted)",
+      "Bash(DEVELOPER_DIR=/Applications/Xcode-26.3.0.app/Contents/Developer xcrun simctl *)",
+      "Bash(python3 *)"
     ]
   }
 }

@@ -11,17 +11,17 @@ public enum MissPolicy: String, Codable, CaseIterable, Sendable {
 
     public var label: String {
         switch self {
-        case .eliminate: return "失格"
-        case .resetToZero: return "スコア0リセット"
-        case .none: return "ペナルティなし"
+        case .eliminate: return String(localized: "失格")
+        case .resetToZero: return String(localized: "スコア0リセット")
+        case .none: return String(localized: "ペナルティなし")
         }
     }
 
     public var shortDescription: String {
         switch self {
-        case .eliminate: return "その人/チームが脱落"
-        case .resetToZero: return "スコアを0に戻して継続"
-        case .none: return "連続ミスでも何も起きない"
+        case .eliminate: return String(localized: "その人/チームが脱落")
+        case .resetToZero: return String(localized: "スコアを0に戻して継続")
+        case .none: return String(localized: "連続ミスでも何も起きない")
         }
     }
 }

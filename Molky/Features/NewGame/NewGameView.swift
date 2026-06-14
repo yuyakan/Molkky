@@ -57,9 +57,15 @@ struct NewGameView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text(mode == .team ? "チーム戦" : "個人戦")
-                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                    .foregroundStyle(Theme.ink.opacity(0.7))
+                Group {
+                    if mode == .team {
+                        Text("チーム戦")
+                    } else {
+                        Text("個人戦")
+                    }
+                }
+                .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                .foregroundStyle(Theme.ink.opacity(0.7))
             }
         }
         .nameInputAlert(
@@ -144,9 +150,15 @@ struct NewGameView: View {
                     .font(.system(.subheadline, design: .rounded).weight(.heavy))
                     .foregroundStyle(Theme.textSecondary)
             }
-            Text(mode == .team ? "団体戦" : "個人戦")
-                .font(.system(size: 30, weight: .black, design: .rounded))
-                .foregroundStyle(Theme.ink)
+            Group {
+                if mode == .team {
+                    Text("団体戦")
+                } else {
+                    Text("個人戦")
+                }
+            }
+            .font(.system(size: 30, weight: .black, design: .rounded))
+            .foregroundStyle(Theme.ink)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top, Theme.Space.s)
@@ -159,7 +171,7 @@ struct NewGameView: View {
         }
     }
 
-    private func modeCard(_ m: GameMode, icon: String, title: String) -> some View {
+    private func modeCard(_ m: GameMode, icon: String, title: LocalizedStringKey) -> some View {
         let selected = mode == m
         return Button {
             withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) { mode = m }
@@ -389,7 +401,7 @@ struct NewGameView: View {
 
     private func addGuest() {
         let nextIndex = guestParticipants.count + 1
-        let g = GuestParticipant(id: UUID(), name: "ゲスト\(nextIndex)")
+        let g = GuestParticipant(id: UUID(), name: String(localized: "ゲスト\(nextIndex)"))
         guestParticipants.append(g)
         selectedOrder.append(g.id)
     }
@@ -527,7 +539,7 @@ struct NewGameView: View {
         }
     }
 
-    private func stepperRow(icon: String, iconColor: Color, label: String, value: Int, range: ClosedRange<Int>, step: Int, binding: Binding<Int>) -> some View {
+    private func stepperRow(icon: String, iconColor: Color, label: LocalizedStringKey, value: Int, range: ClosedRange<Int>, step: Int, binding: Binding<Int>) -> some View {
         HStack(spacing: Theme.Space.s) {
             Image(systemName: icon)
                 .font(isPad ? .title3 : .body)
@@ -569,7 +581,7 @@ struct NewGameView: View {
         .disabled(!canStart)
     }
 
-    private func emptyState(text: String) -> some View {
+    private func emptyState(text: LocalizedStringKey) -> some View {
         VStack(spacing: Theme.Space.s) {
             HStack(spacing: 4) {
                 ForEach(0..<5) { _ in
@@ -588,9 +600,13 @@ struct NewGameView: View {
     private var startButtonTitle: String {
         switch mode {
         case .individual:
-            return selectedOrder.count >= 2 ? "\(selectedOrder.count)人でゲーム開始" : "2人以上を選択"
+            return selectedOrder.count >= 2
+                ? String(localized: "\(selectedOrder.count)人でゲーム開始")
+                : String(localized: "2人以上を選択")
         case .team:
-            return startableTeams.count >= 2 ? "\(startableTeams.count)チームでゲーム開始" : "2チーム以上を追加"
+            return startableTeams.count >= 2
+                ? String(localized: "\(startableTeams.count)チームでゲーム開始")
+                : String(localized: "2チーム以上を追加")
         }
     }
     private var canStart: Bool {
@@ -772,17 +788,17 @@ enum RulePreset: String, CaseIterable, Identifiable {
 
     var name: String {
         switch self {
-        case .standard: return "標準"
-        case .short: return "ショート"
-        case .long: return "ロング"
+        case .standard: return String(localized: "標準")
+        case .short: return String(localized: "ショート")
+        case .long: return String(localized: "ロング")
         }
     }
 
     var shortInfo: String {
         switch self {
-        case .standard: return "50点"
-        case .short: return "30点"
-        case .long: return "70点"
+        case .standard: return String(localized: "50点")
+        case .short: return String(localized: "30点")
+        case .long: return String(localized: "70点")
         }
     }
 

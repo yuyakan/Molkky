@@ -117,7 +117,8 @@ struct TeamBuilderView: View {
     private func teamRow(at i: Int) -> some View {
         let t = teams[i]
         let isEmptyName = t.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-        let displayName = isEmptyName ? "\(teamLabels[min(i, teamLabels.count - 1)])チーム" : t.name
+        let teamLabel = teamLabels[min(i, teamLabels.count - 1)]
+        let displayName = isEmptyName ? String(localized: "\(teamLabel)チーム") : t.name
         let assignedMembers = t.memberIds.compactMap { id in members.first(where: { $0.id == id }) }
 
         return VStack(alignment: .leading, spacing: Theme.Space.s) {
@@ -241,16 +242,22 @@ struct TeamBuilderView: View {
             Button {
                 toggleAbsence(teamIndex: teamIndex, memberId: m.id)
             } label: {
-                Text(isAbsent ? "復帰" : "欠席")
-                    .font(.caption.weight(.heavy))
-                    .foregroundStyle(isAbsent ? Theme.pine : Theme.berry)
-                    .padding(.horizontal, 10).padding(.vertical, 4)
-                    .background(
-                        Capsule().fill(isAbsent ? Theme.pine.opacity(0.12) : Theme.berry.opacity(0.12))
-                    )
-                    .overlay(
-                        Capsule().stroke(isAbsent ? Theme.pine.opacity(0.35) : Theme.berry.opacity(0.35), lineWidth: 1)
-                    )
+                Group {
+                    if isAbsent {
+                        Text("復帰")
+                    } else {
+                        Text("欠席")
+                    }
+                }
+                .font(.caption.weight(.heavy))
+                .foregroundStyle(isAbsent ? Theme.pine : Theme.berry)
+                .padding(.horizontal, 10).padding(.vertical, 4)
+                .background(
+                    Capsule().fill(isAbsent ? Theme.pine.opacity(0.12) : Theme.berry.opacity(0.12))
+                )
+                .overlay(
+                    Capsule().stroke(isAbsent ? Theme.pine.opacity(0.35) : Theme.berry.opacity(0.35), lineWidth: 1)
+                )
             }
             .buttonStyle(PressableButtonStyle())
         }
@@ -421,9 +428,15 @@ private struct AddTeamSheet: View {
         return HStack(spacing: Theme.Space.m) {
             SkittleBadge(number: String(t.name.prefix(1).isEmpty ? "?" : String(t.name.prefix(1))), color: Theme.pine, size: 36)
             VStack(alignment: .leading, spacing: 2) {
-                Text(t.name.isEmpty ? "未命名チーム" : t.name)
-                    .font(.system(.body, design: .rounded).weight(.bold))
-                    .foregroundStyle(Theme.ink)
+                Group {
+                    if t.name.isEmpty {
+                        Text("未命名チーム")
+                    } else {
+                        Text(t.name)
+                    }
+                }
+                .font(.system(.body, design: .rounded).weight(.bold))
+                .foregroundStyle(Theme.ink)
                 if !names.isEmpty {
                     Text(names.joined(separator: " · "))
                         .font(.caption)
@@ -441,7 +454,7 @@ private struct AddTeamSheet: View {
         .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous))
     }
 
-    private func createOptionRow(icon: String, title: String, subtitle: String) -> some View {
+    private func createOptionRow(icon: String, title: LocalizedStringKey, subtitle: LocalizedStringKey) -> some View {
         HStack(spacing: Theme.Space.m) {
             Image(systemName: icon)
                 .font(.title2)
@@ -666,8 +679,14 @@ private struct TeamEditSheet: View {
         } label: {
             HStack(spacing: 6) {
                 Image(systemName: isExisting ? "tray.and.arrow.down.fill" : "bookmark.fill")
-                Text(isExisting ? "保存済みチームを更新" : "このチームを保存")
-                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                Group {
+                    if isExisting {
+                        Text("保存済みチームを更新")
+                    } else {
+                        Text("このチームを保存")
+                    }
+                }
+                .font(.system(.subheadline, design: .rounded).weight(.heavy))
             }
         }
         .buttonStyle(GhostActionStyle())

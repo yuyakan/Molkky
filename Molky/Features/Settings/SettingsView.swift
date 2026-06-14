@@ -81,7 +81,7 @@ struct SettingsView: View {
         }
     }
 
-    private func stepperRow(icon: String, iconColor: Color, label: String, value: Int, range: ClosedRange<Int>, step: Int, binding: Binding<Int>) -> some View {
+    private func stepperRow(icon: String, iconColor: Color, label: LocalizedStringKey, value: Int, range: ClosedRange<Int>, step: Int, binding: Binding<Int>) -> some View {
         HStack(spacing: Theme.Space.s) {
             Image(systemName: icon).foregroundStyle(iconColor).frame(width: 22)
             Text(label)

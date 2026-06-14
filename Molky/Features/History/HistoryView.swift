@@ -155,12 +155,18 @@ struct HistoryView: View {
                     Text(jpDate(g.date))
                         .font(.system(.subheadline, design: .rounded).weight(.heavy))
                         .foregroundStyle(Theme.ink)
-                    Text(g.mode == .team ? "チーム戦" : "個人戦")
-                        .font(.system(.caption2, design: .rounded).weight(.heavy))
-                        .padding(.horizontal, 6).padding(.vertical, 2)
-                        .foregroundStyle(g.mode == .team ? Theme.berry : Theme.pine)
-                        .background((g.mode == .team ? Theme.berry : Theme.pine).opacity(0.12))
-                        .clipShape(Capsule())
+                    Group {
+                        if g.mode == .team {
+                            Text("チーム戦")
+                        } else {
+                            Text("個人戦")
+                        }
+                    }
+                    .font(.system(.caption2, design: .rounded).weight(.heavy))
+                    .padding(.horizontal, 6).padding(.vertical, 2)
+                    .foregroundStyle(g.mode == .team ? Theme.berry : Theme.pine)
+                    .background((g.mode == .team ? Theme.berry : Theme.pine).opacity(0.12))
+                    .clipShape(Capsule())
                 }
                 if let winnerName {
                     Text("勝者 \(winnerName)")
@@ -188,10 +194,7 @@ struct HistoryView: View {
     }
 
     private func jpDate(_ d: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "ja_JP")
-        f.dateFormat = "M月d日(E) HH:mm"
-        return f.string(from: d)
+        d.formatted(.dateTime.month().day().weekday(.abbreviated).hour().minute())
     }
 
     private func delete(_ g: Game) {
@@ -282,7 +285,7 @@ struct GameDetailView: View {
             VStack(alignment: .leading, spacing: Theme.Space.m) {
                 SectionHeader(number: 2, title: "設定")
                 VStack(spacing: Theme.Space.s) {
-                    settingRow(label: "モード", value: game.mode == .team ? "チーム戦" : "個人戦")
+                    settingRow(label: "モード", value: game.mode == .team ? String(localized: "チーム戦") : String(localized: "個人戦"))
                     settingRow(label: "目標点", value: "\(game.targetScore)")
                     settingRow(label: "超過時", value: "\(game.overshootResetTo)")
                     settingRow(label: "連続ミス時", value: missPolicyDescription(for: game))
@@ -292,7 +295,7 @@ struct GameDetailView: View {
         }
     }
 
-    private func settingRow(label: String, value: String) -> some View {
+    private func settingRow(label: LocalizedStringKey, value: String) -> some View {
         HStack {
             Text(label)
                 .font(.system(.subheadline, design: .rounded).weight(.bold))
@@ -406,16 +409,13 @@ struct GameDetailView: View {
 
     private func missPolicyDescription(for g: Game) -> String {
         switch g.missPolicy {
-        case .eliminate: return "\(g.maxConsecutiveMisses)回連続で失格"
-        case .resetToZero: return "\(g.maxConsecutiveMisses)回連続で0リセット"
-        case .none: return "ペナルティなし"
+        case .eliminate: return String(localized: "\(g.maxConsecutiveMisses)回連続で失格")
+        case .resetToZero: return String(localized: "\(g.maxConsecutiveMisses)回連続で0リセット")
+        case .none: return String(localized: "ペナルティなし")
         }
     }
 
     private func detailJpDate(_ d: Date) -> String {
-        let f = DateFormatter()
-        f.locale = Locale(identifier: "ja_JP")
-        f.dateFormat = "yyyy年M月d日(E) HH:mm"
-        return f.string(from: d)
+        d.formatted(.dateTime.year().month().day().weekday(.abbreviated).hour().minute())
     }
 }

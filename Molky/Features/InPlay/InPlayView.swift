@@ -192,27 +192,39 @@ struct InPlayView: View {
     /// 手番カード内の点数ピル（白系）
     private func pointPill(_ pts: Int) -> some View {
         let isMiss = pts == 0
-        return Text(isMiss ? "ミス" : "\(pts)")
-            .font(.system(.subheadline, design: .rounded).weight(.heavy).monospacedDigit())
-            .foregroundStyle(isMiss ? Theme.birch : Theme.ink)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 3)
-            .background(
-                Capsule().fill(isMiss ? Theme.berry : Theme.birch)
-            )
+        return Group {
+            if isMiss {
+                Text("ミス")
+            } else {
+                Text("\(pts)")
+            }
+        }
+        .font(.system(.subheadline, design: .rounded).weight(.heavy).monospacedDigit())
+        .foregroundStyle(isMiss ? Theme.birch : Theme.ink)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 3)
+        .background(
+            Capsule().fill(isMiss ? Theme.berry : Theme.birch)
+        )
     }
 
     /// 行内の小さな点数表示（ライト背景）
     private func miniPointBadge(_ pts: Int) -> some View {
         let isMiss = pts == 0
-        return Text(isMiss ? "ミス" : "+\(pts)")
-            .font(.system(.caption, design: .rounded).weight(.heavy).monospacedDigit())
-            .foregroundStyle(isMiss ? Theme.berry : Theme.pine)
-            .padding(.horizontal, 6)
-            .padding(.vertical, 2)
-            .background(
-                Capsule().fill(isMiss ? Theme.berry.opacity(0.12) : Theme.pine.opacity(0.12))
-            )
+        return Group {
+            if isMiss {
+                Text("ミス")
+            } else {
+                Text("+\(pts)")
+            }
+        }
+        .font(.system(.caption, design: .rounded).weight(.heavy).monospacedDigit())
+        .foregroundStyle(isMiss ? Theme.berry : Theme.pine)
+        .padding(.horizontal, 6)
+        .padding(.vertical, 2)
+        .background(
+            Capsule().fill(isMiss ? Theme.berry.opacity(0.12) : Theme.pine.opacity(0.12))
+        )
     }
 
     private func heroCard(accentIndex: Int, title: String, isGuest: Bool, thrower: String?, score: Int, misses: Int, recentPoints: [Int]) -> some View {
@@ -471,14 +483,20 @@ struct InPlayView: View {
             Text("\(positionFromEnd)投前")
                 .font(.system(size: 9, design: .rounded).weight(.semibold))
                 .foregroundStyle(Theme.textSecondary)
-            Text(isMiss ? "ミス" : "+\(pts)")
-                .font(.system(.subheadline, design: .rounded).weight(.heavy).monospacedDigit())
-                .foregroundStyle(isMiss ? .white : accent)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 4)
-                .background(
-                    Capsule().fill(isMiss ? Theme.berry : accent.opacity(0.12))
-                )
+            Group {
+                if isMiss {
+                    Text("ミス")
+                } else {
+                    Text("+\(pts)")
+                }
+            }
+            .font(.system(.subheadline, design: .rounded).weight(.heavy).monospacedDigit())
+            .foregroundStyle(isMiss ? .white : accent)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 4)
+            .background(
+                Capsule().fill(isMiss ? Theme.berry : accent.opacity(0.12))
+            )
         }
     }
 
