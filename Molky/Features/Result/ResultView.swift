@@ -5,9 +5,12 @@ struct ResultView: View {
     @Bindable var game: Game
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.horizontalSizeClass) private var hSize
     private let coordinator = NavigationCoordinator.shared
 
     @State private var rematchSession: GameSessionStore?
+
+    private var isPad: Bool { hSize == .regular }
 
     var body: some View {
         ZStack {
@@ -71,37 +74,38 @@ struct ResultView: View {
                 .clipShape(shape)
                 .allowsHitTesting(false)
 
-            VStack(alignment: .leading, spacing: Theme.Space.m) {
-                HStack(spacing: 6) {
+            VStack(alignment: .leading, spacing: isPad ? Theme.Space.l : Theme.Space.m) {
+                HStack(spacing: 8) {
                     Image(systemName: "trophy.fill")
+                        .font(isPad ? .title : .body)
                         .foregroundStyle(Theme.ink)
                     Text("優勝")
-                        .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                        .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.heavy))
                         .foregroundStyle(Theme.ink.opacity(0.75))
                 }
                 Text(title)
-                    .font(.system(size: 44, weight: .black, design: .rounded))
+                    .font(.system(size: Theme.FontSize.resultName(isPad: isPad), weight: .black, design: .rounded))
                     .foregroundStyle(Theme.ink)
                     .lineLimit(2)
                     .minimumScaleFactor(0.5)
                 if let subtitle, !subtitle.isEmpty {
                     Text(subtitle)
-                        .font(.subheadline.weight(.semibold))
+                        .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.semibold))
                         .foregroundStyle(Theme.ink.opacity(0.7))
                 }
                 Spacer(minLength: Theme.Space.s)
-                HStack(alignment: .firstTextBaseline, spacing: 4) {
+                HStack(alignment: .firstTextBaseline, spacing: 8) {
                     Text("\(score)")
-                        .font(.system(size: 80, weight: .black, design: .rounded).monospacedDigit())
+                        .font(.system(size: Theme.FontSize.resultScore(isPad: isPad), weight: .black, design: .rounded).monospacedDigit())
                         .foregroundStyle(Theme.ink)
                     Text("点")
-                        .font(.system(.title3, design: .rounded).weight(.heavy))
+                        .font(.system(isPad ? .title : .title3, design: .rounded).weight(.heavy))
                         .foregroundStyle(Theme.ink.opacity(0.5))
                 }
             }
-            .padding(Theme.Space.xl)
+            .padding(isPad ? Theme.Space.xxl : Theme.Space.xl)
         }
-        .frame(minHeight: 260)
+        .frame(minHeight: isPad ? 420 : 260)
         .clipShape(shape)
         .shadow(color: Theme.sun.opacity(0.3), radius: 22, y: 12)
     }

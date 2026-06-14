@@ -93,6 +93,46 @@ enum Theme {
         static let xl: CGFloat = 24
         static let xxl: CGFloat = 36
     }
+
+    // MARK: - iPad用タイポ/サイズトークン
+    enum FontSize {
+        /// 手番カードの巨大スコア
+        static func heroScore(isPad: Bool) -> CGFloat { isPad ? 180 : 96 }
+        /// 手番カードの名前
+        static func heroName(isPad: Bool) -> CGFloat { isPad ? 56 : 32 }
+        /// 手番カードの残り点
+        static func heroRemain(isPad: Bool) -> CGFloat { isPad ? 96 : 56 }
+        /// プレイヤー行の名前
+        static func rowName(isPad: Bool) -> CGFloat { isPad ? 30 : 20 }
+        /// プレイヤー行のスコア
+        static func rowScore(isPad: Bool) -> CGFloat { isPad ? 52 : 32 }
+        /// キーパッド数字
+        static func keypadDigit(isPad: Bool) -> CGFloat { isPad ? 52 : 32 }
+        /// キーパッドミス/取消テキスト
+        static func keypadAction(isPad: Bool) -> CGFloat { isPad ? 28 : 20 }
+        /// 結果画面の勝者スコア
+        static func resultScore(isPad: Bool) -> CGFloat { isPad ? 140 : 80 }
+        /// 結果画面の勝者名
+        static func resultName(isPad: Bool) -> CGFloat { isPad ? 64 : 44 }
+    }
+
+    enum KeySize {
+        /// 数字キー高さ
+        static func keypadKey(isPad: Bool) -> CGFloat { isPad ? 88 : 60 }
+        /// ミス/取消キー高さ
+        static func keypadAction(isPad: Bool) -> CGFloat { isPad ? 88 : 60 }
+        /// 行の最小高さ
+        static func rowMin(isPad: Bool) -> CGFloat { isPad ? 84 : 60 }
+        /// 結果画面アクションバー高さ
+        static func resultAction(isPad: Bool) -> CGFloat { isPad ? 80 : 56 }
+    }
+}
+
+// MARK: - iPad判定ヘルパー
+extension UIDevice {
+    static var isPad: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad
+    }
 }
 
 // MARK: - Skittle Shape
@@ -195,9 +235,10 @@ struct TicketCard<Content: View>: View {
         self.accent = accent
         self.content = content()
     }
+    private var isPad: Bool { UIDevice.isPad }
     var body: some View {
         content
-            .padding(Theme.Space.l)
+            .padding(isPad ? Theme.Space.xl : Theme.Space.l)
             .background(
                 ZStack(alignment: .topLeading) {
                     UnevenRoundedRectangle(
@@ -236,10 +277,11 @@ struct SectionHeader: View {
     let number: Int
     let title: String
     var trailing: AnyView? = nil
+    private var isPad: Bool { UIDevice.isPad }
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: Theme.Space.s) {
             Text(title)
-                .font(.system(.title3, design: .rounded).weight(.heavy))
+                .font(.system(isPad ? .title : .title3, design: .rounded).weight(.heavy))
                 .foregroundStyle(Theme.ink)
             Spacer()
             trailing
@@ -252,9 +294,10 @@ struct PrimaryActionStyle: ButtonStyle {
     var fill: AnyShapeStyle = AnyShapeStyle(Theme.accentGradient)
     var shadowColor: Color = Theme.pine.opacity(0.35)
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
+        let isPad = UIDevice.isPad
+        return configuration.label
             .padding(.horizontal, Theme.Space.l)
-            .frame(maxWidth: .infinity, minHeight: 60)
+            .frame(maxWidth: .infinity, minHeight: isPad ? 84 : 60)
             .background(
                 UnevenRoundedRectangle(
                     topLeadingRadius: Theme.Radius.large,
@@ -265,7 +308,7 @@ struct PrimaryActionStyle: ButtonStyle {
                 .fill(fill)
             )
             .foregroundStyle(.white)
-            .shadow(color: shadowColor, radius: 14, y: 6)
+            .shadow(color: shadowColor, radius: isPad ? 20 : 14, y: isPad ? 8 : 6)
             .scaleEffect(configuration.isPressed ? 0.97 : 1.0)
             .animation(.spring(response: 0.25, dampingFraction: 0.7), value: configuration.isPressed)
     }

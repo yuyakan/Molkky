@@ -7,27 +7,65 @@ struct HomeView: View {
     @Query(sort: \Team.createdAt, order: .reverse) private var teams: [Team]
 
     @Bindable private var coordinator = NavigationCoordinator.shared
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var isPad: Bool { hSize == .regular }
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
             ZStack(alignment: .top) {
                 Theme.background.ignoresSafeArea()
-                ScrollView {
-                    VStack(spacing: Theme.Space.xl) {
-                        brandHeader
-                        heroCTA
-                        menuStrip
-                        if !recentGames.isEmpty {
-                            recentSection
-                        } else {
-                            firstTimePrompt
-                        }
-                    }
-                    .padding(.horizontal, Theme.Space.l)
-                    .padding(.bottom, Theme.Space.xxl)
+                if isPad {
+                    padBody
+                } else {
+                    phoneBody
                 }
             }
             .toolbar(.hidden, for: .navigationBar)
+        }
+    }
+
+    private var phoneBody: some View {
+        ScrollView {
+            VStack(spacing: Theme.Space.xl) {
+                brandHeader
+                heroCTA
+                menuStrip
+                if !recentGames.isEmpty {
+                    recentSection
+                } else {
+                    firstTimePrompt
+                }
+            }
+            .padding(.horizontal, Theme.Space.l)
+            .padding(.bottom, Theme.Space.xxl)
+        }
+    }
+
+    /// iPad: 上部にブランド、下にゲーム開始CTAを巨大に、その下にメニューと最近のゲームを横並び
+    private var padBody: some View {
+        ScrollView {
+            VStack(spacing: Theme.Space.xxl) {
+                brandHeader
+                    .padding(.top, Theme.Space.s)
+
+                // ヒーローCTA: iPad では画面幅を活かして横長カードを2枚
+                heroCTA
+
+                // 下段: メニューと最近のゲームを横並び
+                HStack(alignment: .top, spacing: Theme.Space.l) {
+                    menuStrip
+                        .frame(maxWidth: .infinity)
+                    if !recentGames.isEmpty {
+                        recentSection
+                            .frame(maxWidth: .infinity)
+                    } else {
+                        firstTimePrompt
+                            .frame(maxWidth: .infinity)
+                    }
+                }
+                .padding(.bottom, Theme.Space.xl)
+            }
+            .padding(.horizontal, Theme.Space.xl)
         }
     }
 
@@ -120,9 +158,9 @@ struct HomeView: View {
                 ))
             SkittleShape()
                 .fill(foreground.opacity(0.12))
-                .frame(width: 60, height: 90)
+                .frame(width: isPad ? 100 : 60, height: isPad ? 150 : 90)
                 .rotationEffect(.degrees(14))
-                .offset(x: 20, y: 30)
+                .offset(x: isPad ? 40 : 20, y: isPad ? 50 : 30)
                 .clipShape(UnevenRoundedRectangle(
                     topLeadingRadius: Theme.Radius.xLarge,
                     bottomLeadingRadius: Theme.Radius.medium,
@@ -130,33 +168,33 @@ struct HomeView: View {
                     topTrailingRadius: Theme.Radius.medium
                 ))
 
-            VStack(alignment: .leading, spacing: Theme.Space.s) {
+            VStack(alignment: .leading, spacing: isPad ? Theme.Space.m : Theme.Space.s) {
                 Image(systemName: icon)
-                    .font(.title2.bold())
+                    .font(isPad ? .system(size: 48).bold() : .title2.bold())
                     .foregroundStyle(foreground)
                 Spacer()
                 Text(title)
-                    .font(.system(size: 22, weight: .black, design: .rounded))
+                    .font(.system(size: isPad ? 44 : 22, weight: .black, design: .rounded))
                     .foregroundStyle(foreground)
                 Text(subtitle)
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(foreground.opacity(0.7))
+                    .font(.system(isPad ? .title3 : .caption, design: .rounded).weight(.semibold))
+                    .foregroundStyle(foreground.opacity(0.75))
                 HStack {
                     Spacer()
                     ZStack {
-                        Circle().fill(badge).frame(width: 36, height: 36)
+                        Circle().fill(badge).frame(width: isPad ? 64 : 36, height: isPad ? 64 : 36)
                         Image(systemName: "play.fill")
-                            .font(.subheadline.bold())
+                            .font(isPad ? .title.bold() : .subheadline.bold())
                             .foregroundStyle(Theme.ink)
-                            .offset(x: 1)
+                            .offset(x: isPad ? 2 : 1)
                     }
-                    .shadow(color: badge.opacity(0.45), radius: 8, y: 4)
+                    .shadow(color: badge.opacity(0.45), radius: isPad ? 12 : 8, y: isPad ? 6 : 4)
                 }
             }
-            .padding(Theme.Space.l)
+            .padding(isPad ? Theme.Space.xxl : Theme.Space.l)
         }
-        .frame(height: 200)
-        .shadow(color: Theme.ink.opacity(0.18), radius: 16, y: 8)
+        .frame(height: isPad ? 280 : 200)
+        .shadow(color: Theme.ink.opacity(0.18), radius: isPad ? 22 : 16, y: isPad ? 12 : 8)
     }
 
     private var menuStrip: some View {
@@ -199,42 +237,42 @@ struct HomeView: View {
             // 装飾ストライプ
             Rectangle()
                 .fill(accent)
-                .frame(width: 36, height: 4)
-                .offset(x: -16, y: 18)
-            VStack(alignment: .leading, spacing: Theme.Space.m) {
-                Spacer().frame(height: 8)
+                .frame(width: isPad ? 56 : 36, height: isPad ? 6 : 4)
+                .offset(x: isPad ? -24 : -16, y: isPad ? 26 : 18)
+            VStack(alignment: .leading, spacing: isPad ? Theme.Space.l : Theme.Space.m) {
+                Spacer().frame(height: isPad ? 16 : 8)
                 Image(systemName: symbol)
-                    .font(.title)
+                    .font(.system(size: isPad ? 56 : 28).weight(.bold))
                     .foregroundStyle(accent)
                 if let number {
                     HStack(alignment: .firstTextBaseline, spacing: 4) {
                         Text("\(number)")
-                            .font(.system(size: 32, weight: .black, design: .rounded).monospacedDigit())
+                            .font(.system(size: isPad ? 56 : 32, weight: .black, design: .rounded).monospacedDigit())
                             .foregroundStyle(Theme.ink)
                         Text(label)
-                            .font(.subheadline.weight(.bold))
+                            .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.bold))
                             .foregroundStyle(Theme.textSecondary)
                     }
                 } else {
                     Text(label)
-                        .font(.system(.title3, design: .rounded).weight(.heavy))
+                        .font(.system(size: isPad ? 32 : 20, weight: .heavy, design: .rounded))
                         .foregroundStyle(Theme.ink)
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
                 }
             }
-            .padding(Theme.Space.l)
+            .padding(isPad ? Theme.Space.xl : Theme.Space.l)
         }
-        .frame(maxWidth: .infinity, minHeight: 140, alignment: .leading)
-        .shadow(color: Theme.ink.opacity(0.06), radius: 10, y: 4)
+        .frame(maxWidth: .infinity, minHeight: isPad ? 200 : 140, alignment: .leading)
+        .shadow(color: Theme.ink.opacity(0.06), radius: isPad ? 14 : 10, y: isPad ? 6 : 4)
     }
 
     private var recentSection: some View {
-        VStack(alignment: .leading, spacing: Theme.Space.m) {
+        VStack(alignment: .leading, spacing: isPad ? Theme.Space.l : Theme.Space.m) {
             HStack {
                 Text("前回のゲーム")
-                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                    .foregroundStyle(Theme.textSecondary)
+                    .font(.system(isPad ? .title2 : .subheadline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(isPad ? Theme.ink : Theme.textSecondary)
                 Spacer()
             }
             if let latest = recentGames.first {
@@ -265,16 +303,16 @@ struct HomeView: View {
         }()
         let count = g.mode == .team ? g.teams.count : g.participants.count
 
-        return VStack(alignment: .leading, spacing: Theme.Space.m) {
+        return VStack(alignment: .leading, spacing: isPad ? Theme.Space.l : Theme.Space.m) {
             HStack(spacing: 6) {
                 Text(g.mode == .team ? "チーム戦" : "個人戦")
-                    .font(.system(.caption, design: .rounded).weight(.heavy))
-                    .padding(.horizontal, 8).padding(.vertical, 3)
+                    .font(.system(isPad ? .subheadline : .caption, design: .rounded).weight(.heavy))
+                    .padding(.horizontal, isPad ? 12 : 8).padding(.vertical, isPad ? 6 : 3)
                     .foregroundStyle(g.mode == .team ? Theme.berry : Theme.pine)
                     .background((g.mode == .team ? Theme.berry : Theme.pine).opacity(0.12))
                     .clipShape(Capsule())
                 Text(homeJpDate(g.date))
-                    .font(.system(.caption, design: .rounded).weight(.bold))
+                    .font(.system(isPad ? .subheadline : .caption, design: .rounded).weight(.bold))
                     .foregroundStyle(Theme.textSecondary)
                 Spacer()
             }
@@ -284,13 +322,14 @@ struct HomeView: View {
                     VStack(alignment: .leading, spacing: 2) {
                         HStack(spacing: 6) {
                             Image(systemName: "trophy.fill")
+                                .font(isPad ? .title3 : .body)
                                 .foregroundStyle(Theme.sun)
                             Text("勝者")
-                                .font(.caption.weight(.heavy))
+                                .font(.system(isPad ? .subheadline : .caption, design: .rounded).weight(.heavy))
                                 .foregroundStyle(Theme.textSecondary)
                         }
                         Text(winnerName)
-                            .font(.system(size: 28, weight: .black, design: .rounded))
+                            .font(.system(size: isPad ? 44 : 28, weight: .black, design: .rounded))
                             .foregroundStyle(Theme.ink)
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)
@@ -299,30 +338,31 @@ struct HomeView: View {
                     if let winnerScore {
                         VStack(alignment: .trailing, spacing: -4) {
                             Text("\(winnerScore)")
-                                .font(.system(size: 44, weight: .black, design: .rounded).monospacedDigit())
+                                .font(.system(size: isPad ? 72 : 44, weight: .black, design: .rounded).monospacedDigit())
                                 .foregroundStyle(Theme.pine)
                             Text("点")
-                                .font(.caption.weight(.bold))
+                                .font(.system(isPad ? .subheadline : .caption, design: .rounded).weight(.bold))
                                 .foregroundStyle(Theme.textSecondary)
                         }
                     }
                 }
             } else {
                 Text("\(count) \(g.mode == .team ? "チーム" : "人")参加 · 未完了")
-                    .font(.subheadline.weight(.semibold))
+                    .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.semibold))
                     .foregroundStyle(Theme.textSecondary)
             }
 
             HStack(spacing: 4) {
                 Spacer()
                 Text("詳細を見る")
-                    .font(.caption.weight(.heavy))
+                    .font(.system(isPad ? .subheadline : .caption, design: .rounded).weight(.heavy))
                 Image(systemName: "arrow.right")
-                    .font(.caption2.bold())
+                    .font(isPad ? .subheadline.bold() : .caption2.bold())
             }
             .foregroundStyle(Theme.pine)
         }
-        .padding(Theme.Space.l)
+        .padding(isPad ? Theme.Space.xl : Theme.Space.l)
+        .frame(minHeight: isPad ? 280 : 0)
         .background(Theme.surface)
         .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.large, style: .continuous))
         .overlay(

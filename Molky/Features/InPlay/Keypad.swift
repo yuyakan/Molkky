@@ -5,17 +5,21 @@ struct Keypad: View {
     let onTap: (Int) -> Void
     let onUndo: () -> Void
     let canUndo: Bool
+    var isPad: Bool = false
 
-    private let columns = [
-        GridItem(.flexible(), spacing: 6),
-        GridItem(.flexible(), spacing: 6),
-        GridItem(.flexible(), spacing: 6),
-        GridItem(.flexible(), spacing: 6)
-    ]
+    private var spacing: CGFloat { isPad ? 12 : 6 }
+    private var keyHeight: CGFloat { Theme.KeySize.keypadKey(isPad: isPad) }
+    private var actionHeight: CGFloat { Theme.KeySize.keypadAction(isPad: isPad) }
+    private var digitSize: CGFloat { Theme.FontSize.keypadDigit(isPad: isPad) }
+    private var actionTextSize: CGFloat { Theme.FontSize.keypadAction(isPad: isPad) }
+
+    private var columns: [GridItem] {
+        Array(repeating: GridItem(.flexible(), spacing: spacing), count: 4)
+    }
 
     var body: some View {
-        VStack(spacing: 6) {
-            LazyVGrid(columns: columns, spacing: 6) {
+        VStack(spacing: spacing) {
+            LazyVGrid(columns: columns, spacing: spacing) {
                 ForEach(1...12, id: \.self) { n in
                     Button {
                         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
@@ -28,7 +32,7 @@ struct Keypad: View {
                 }
             }
 
-            HStack(spacing: 6) {
+            HStack(spacing: spacing) {
                 Button {
                     UINotificationFeedbackGenerator().notificationOccurred(.warning)
                     onTap(0)
@@ -53,39 +57,40 @@ struct Keypad: View {
     }
 
     private func numberKey(_ n: Int) -> some View {
-        ZStack(alignment: .topLeading) {
+        let radius: CGFloat = isPad ? 22 : 16
+        let radiusSmall: CGFloat = isPad ? 10 : 6
+        return ZStack(alignment: .topLeading) {
             UnevenRoundedRectangle(
-                topLeadingRadius: 16,
-                bottomLeadingRadius: 6,
-                bottomTrailingRadius: 16,
-                topTrailingRadius: 6
+                topLeadingRadius: radius,
+                bottomLeadingRadius: radiusSmall,
+                bottomTrailingRadius: radius,
+                topTrailingRadius: radiusSmall
             )
             .fill(Theme.surface)
             .overlay(
                 UnevenRoundedRectangle(
-                    topLeadingRadius: 16,
-                    bottomLeadingRadius: 6,
-                    bottomTrailingRadius: 16,
-                    topTrailingRadius: 6
+                    topLeadingRadius: radius,
+                    bottomLeadingRadius: radiusSmall,
+                    bottomTrailingRadius: radius,
+                    topTrailingRadius: radiusSmall
                 )
                 .strokeBorder(Theme.ink.opacity(0.10), lineWidth: 1)
             )
-            // 上左の角に小さなドット（独自アクセント）
+            // 上左の角のアクセントドット
             Circle()
                 .fill(numberAccent(n))
-                .frame(width: 6, height: 6)
-                .padding(8)
+                .frame(width: isPad ? 10 : 6, height: isPad ? 10 : 6)
+                .padding(isPad ? 12 : 8)
             Text("\(n)")
-                .font(.system(size: 32, weight: .black, design: .rounded).monospacedDigit())
+                .font(.system(size: digitSize, weight: .black, design: .rounded).monospacedDigit())
                 .foregroundStyle(Theme.ink)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(height: 60)
+        .frame(height: keyHeight)
         .shadow(color: Theme.ink.opacity(0.05), radius: 3, y: 2)
     }
 
     private func numberAccent(_ n: Int) -> Color {
-        // 視覚的グルーピング: 低/中/高で色分け
         switch n {
         case 1...4: return Theme.pine
         case 5...8: return Theme.sky
@@ -95,11 +100,13 @@ struct Keypad: View {
     }
 
     private var missKey: some View {
+        let radius: CGFloat = isPad ? 28 : 22
+        let radiusSmall: CGFloat = isPad ? 12 : 8
         let shape = UnevenRoundedRectangle(
-            topLeadingRadius: 22,
-            bottomLeadingRadius: 8,
-            bottomTrailingRadius: 22,
-            topTrailingRadius: 8
+            topLeadingRadius: radius,
+            bottomLeadingRadius: radiusSmall,
+            bottomTrailingRadius: radius,
+            topTrailingRadius: radiusSmall
         )
         return ZStack {
             shape.fill(
@@ -109,51 +116,51 @@ struct Keypad: View {
                     endPoint: .bottomTrailing
                 )
             )
-            // 装飾の倒れたスキットル（右下に流す）
             GeometryReader { geo in
                 SkittleShape()
                     .fill(Color.white.opacity(0.18))
-                    .frame(width: 50, height: 76)
+                    .frame(width: isPad ? 72 : 50, height: isPad ? 108 : 76)
                     .rotationEffect(.degrees(72))
-                    .position(x: geo.size.width - 30, y: geo.size.height - 4)
+                    .position(x: geo.size.width - (isPad ? 42 : 30), y: geo.size.height - 4)
             }
             .clipShape(shape)
             .allowsHitTesting(false)
 
-            // テキストは中央配置
-            HStack(spacing: 8) {
+            HStack(spacing: isPad ? 12 : 8) {
                 Image(systemName: "xmark")
-                    .font(.system(size: 22, weight: .black))
+                    .font(.system(size: actionTextSize + 4, weight: .black))
                 Text("ミス")
-                    .font(.system(size: 20, weight: .black, design: .rounded))
+                    .font(.system(size: actionTextSize, weight: .black, design: .rounded))
             }
             .foregroundStyle(.white)
-            .padding(.horizontal, 18)
+            .padding(.horizontal, isPad ? 26 : 18)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(height: 60)
-        .shadow(color: Theme.berry.opacity(0.3), radius: 10, y: 4)
+        .frame(height: actionHeight)
+        .shadow(color: Theme.berry.opacity(0.3), radius: isPad ? 14 : 10, y: isPad ? 6 : 4)
     }
 
     private var undoKey: some View {
-        ZStack {
+        let radius: CGFloat = isPad ? 28 : 22
+        let radiusSmall: CGFloat = isPad ? 12 : 8
+        return ZStack {
             UnevenRoundedRectangle(
-                topLeadingRadius: 8,
-                bottomLeadingRadius: 22,
-                bottomTrailingRadius: 8,
-                topTrailingRadius: 22
+                topLeadingRadius: radiusSmall,
+                bottomLeadingRadius: radius,
+                bottomTrailingRadius: radiusSmall,
+                topTrailingRadius: radius
             )
             .fill(Theme.ink)
-            HStack(spacing: 4) {
+            HStack(spacing: isPad ? 8 : 4) {
                 Image(systemName: "arrow.uturn.backward")
-                    .font(.headline.bold())
+                    .font(isPad ? .title2.bold() : .headline.bold())
                 Text("取消")
-                    .font(.system(size: 16, weight: .heavy, design: .rounded))
+                    .font(.system(size: actionTextSize - 4, weight: .heavy, design: .rounded))
             }
             .foregroundStyle(Theme.birch)
         }
-        .frame(width: 100, height: 60)
-        .shadow(color: Theme.ink.opacity(0.22), radius: 6, y: 3)
+        .frame(width: isPad ? 140 : 100, height: actionHeight)
+        .shadow(color: Theme.ink.opacity(0.22), radius: isPad ? 10 : 6, y: isPad ? 5 : 3)
     }
 }
 

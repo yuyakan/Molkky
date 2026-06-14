@@ -3,25 +3,77 @@ import SwiftData
 
 struct HistoryView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.horizontalSizeClass) private var hSize
     @Query(sort: \Game.date, order: .reverse) private var games: [Game]
+
+    @State private var selectedGameId: UUID?
+    private var isPad: Bool { hSize == .regular }
 
     var body: some View {
         ZStack {
             Theme.background.ignoresSafeArea()
+            if isPad {
+                padBody
+            } else {
+                phoneBody
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("履歴")
+                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                    .foregroundStyle(Theme.ink.opacity(0.7))
+            }
+        }
+    }
+
+    private var phoneBody: some View {
+        ScrollView {
+            if games.isEmpty {
+                emptyState
+            } else {
+                LazyVStack(spacing: Theme.Space.s) {
+                    ForEach(games) { g in
+                        NavigationLink {
+                            GameDetailView(game: g)
+                        } label: {
+                            row(g, selected: false)
+                        }
+                        .buttonStyle(PressableButtonStyle())
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                delete(g)
+                            } label: {
+                                Label("削除", systemImage: "trash")
+                            }
+                        }
+                    }
+                }
+                .padding(.horizontal, Theme.Space.l)
+                .padding(.top, Theme.Space.s)
+                .padding(.bottom, Theme.Space.xl)
+            }
+        }
+    }
+
+    private var padBody: some View {
+        HStack(alignment: .top, spacing: 0) {
             ScrollView {
                 if games.isEmpty {
                     emptyState
                 } else {
                     LazyVStack(spacing: Theme.Space.s) {
                         ForEach(games) { g in
-                            NavigationLink {
-                                GameDetailView(game: g)
+                            Button {
+                                selectedGameId = g.id
                             } label: {
-                                row(g)
+                                row(g, selected: selectedGameId == g.id)
                             }
                             .buttonStyle(PressableButtonStyle())
                             .swipeActions {
                                 Button(role: .destructive) {
+                                    if selectedGameId == g.id { selectedGameId = nil }
                                     delete(g)
                                 } label: {
                                     Label("削除", systemImage: "trash")
@@ -34,15 +86,38 @@ struct HistoryView: View {
                     .padding(.bottom, Theme.Space.xl)
                 }
             }
+            .frame(width: 400)
+
+            Rectangle()
+                .fill(Theme.ink.opacity(0.08))
+                .frame(width: 1)
+
+            Group {
+                if let selected = games.first(where: { $0.id == selectedGameId }) {
+                    GameDetailView(game: selected)
+                } else {
+                    detailPlaceholder
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Text("履歴")
-                    .font(.system(.subheadline, design: .rounded).weight(.heavy))
-                    .foregroundStyle(Theme.ink.opacity(0.7))
+        .onAppear {
+            if selectedGameId == nil, let first = games.first {
+                selectedGameId = first.id
             }
         }
+    }
+
+    private var detailPlaceholder: some View {
+        VStack(spacing: Theme.Space.m) {
+            Image(systemName: "clock.arrow.circlepath")
+                .font(.system(size: 72))
+                .foregroundStyle(Theme.ink.opacity(0.2))
+            Text("左から試合を選択")
+                .font(.system(.title3, design: .rounded).weight(.bold))
+                .foregroundStyle(Theme.textSecondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private var emptyState: some View {
@@ -67,7 +142,7 @@ struct HistoryView: View {
         .frame(maxWidth: .infinity)
     }
 
-    private func row(_ g: Game) -> some View {
+    private func row(_ g: Game, selected: Bool) -> some View {
         let winnerName: String? = {
             if g.mode == .team {
                 return g.teams.first(where: { $0.finishedRank == 1 })?.displayName
@@ -98,15 +173,17 @@ struct HistoryView: View {
                 }
             }
             Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundStyle(Theme.ink.opacity(0.3))
+            if !isPad {
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(Theme.ink.opacity(0.3))
+            }
         }
         .padding(Theme.Space.m)
-        .background(Theme.surface)
+        .background(selected ? Theme.pine.opacity(0.10) : Theme.surface)
         .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous)
-                .stroke(Theme.ink.opacity(0.06), lineWidth: 1)
+                .stroke(selected ? Theme.pine : Theme.ink.opacity(0.06), lineWidth: selected ? 2 : 1)
         )
     }
 

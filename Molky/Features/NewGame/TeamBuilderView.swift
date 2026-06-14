@@ -65,7 +65,7 @@ struct TeamBuilderView: View {
                 savedTeams: savedTeams,
                 onAddNewMember: onAddMember
             )
-            .presentationDetents([.medium, .large])
+            .presentationDetents([.large])
         }
         .sheet(isPresented: $showAddSheet) {
             AddTeamSheet(
@@ -80,7 +80,7 @@ struct TeamBuilderView: View {
                     showAddSheet = false
                 }
             )
-            .presentationDetents([.medium])
+            .presentationDetents([.large])
         }
     }
 
@@ -526,12 +526,15 @@ private struct TeamEditSheet: View {
                         }
                     }
                 )
-                .presentationDetents([.medium, .large])
+                .presentationDetents([.large])
             }
-            .alert("新しいメンバーを追加", isPresented: $showNewMemberAlert) {
-                TextField("名前", text: $newMemberName)
-                Button("追加") { commitNewMember() }
-                Button("キャンセル", role: .cancel) { newMemberName = "" }
+            .nameInputAlert(
+                title: "新しいメンバーを追加",
+                isPresented: $showNewMemberAlert,
+                text: $newMemberName
+            ) { name in
+                newMemberName = name
+                commitNewMember()
             }
         }
     }

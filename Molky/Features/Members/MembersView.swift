@@ -3,39 +3,22 @@ import SwiftData
 
 struct MembersView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.horizontalSizeClass) private var hSize
     @Query(sort: \Member.createdAt, order: .reverse) private var members: [Member]
 
     @State private var showAdd = false
     @State private var newName = ""
+    @State private var selectedMemberId: UUID?
+
+    private var isPad: Bool { hSize == .regular }
 
     var body: some View {
         ZStack {
             Theme.background.ignoresSafeArea()
-            ScrollView {
-                if members.isEmpty {
-                    emptyState
-                } else {
-                    LazyVStack(spacing: Theme.Space.s) {
-                        ForEach(Array(members.enumerated()), id: \.element.id) { (i, m) in
-                            NavigationLink {
-                                MemberDetailView(member: m)
-                            } label: {
-                                row(m, colorIndex: i)
-                            }
-                            .buttonStyle(PressableButtonStyle())
-                            .swipeActions {
-                                Button(role: .destructive) {
-                                    delete(m)
-                                } label: {
-                                    Label("削除", systemImage: "trash")
-                                }
-                            }
-                        }
-                    }
-                    .padding(.horizontal, Theme.Space.l)
-                    .padding(.top, Theme.Space.s)
-                    .padding(.bottom, Theme.Space.xl)
-                }
+            if isPad {
+                padBody
+            } else {
+                phoneBody
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -55,11 +38,110 @@ struct MembersView: View {
                 }
             }
         }
-        .alert("メンバーを追加", isPresented: $showAdd) {
-            TextField("名前", text: $newName)
-            Button("追加") { add() }
-            Button("キャンセル", role: .cancel) { newName = "" }
+        .nameInputAlert(
+            title: "メンバーを追加",
+            isPresented: $showAdd,
+            text: $newName
+        ) { name in
+            newName = name
+            add()
         }
+    }
+
+    private var phoneBody: some View {
+        ScrollView {
+            if members.isEmpty {
+                emptyState
+            } else {
+                LazyVStack(spacing: Theme.Space.s) {
+                    ForEach(Array(members.enumerated()), id: \.element.id) { (i, m) in
+                        NavigationLink {
+                            MemberDetailView(member: m)
+                        } label: {
+                            row(m, colorIndex: i, selected: false)
+                        }
+                        .buttonStyle(PressableButtonStyle())
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                delete(m)
+                            } label: {
+                                Label("削除", systemImage: "trash")
+                            }
+                        }
+                    }
+                }
+                .padding(.horizontal, Theme.Space.l)
+                .padding(.top, Theme.Space.s)
+                .padding(.bottom, Theme.Space.xl)
+            }
+        }
+    }
+
+    /// iPad: 左に一覧、右に詳細を同時表示
+    private var padBody: some View {
+        HStack(alignment: .top, spacing: 0) {
+            // 左：一覧
+            ScrollView {
+                if members.isEmpty {
+                    emptyState
+                } else {
+                    LazyVStack(spacing: Theme.Space.s) {
+                        ForEach(Array(members.enumerated()), id: \.element.id) { (i, m) in
+                            Button {
+                                selectedMemberId = m.id
+                            } label: {
+                                row(m, colorIndex: i, selected: selectedMemberId == m.id)
+                            }
+                            .buttonStyle(PressableButtonStyle())
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    if selectedMemberId == m.id { selectedMemberId = nil }
+                                    delete(m)
+                                } label: {
+                                    Label("削除", systemImage: "trash")
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal, Theme.Space.l)
+                    .padding(.top, Theme.Space.s)
+                    .padding(.bottom, Theme.Space.xl)
+                }
+            }
+            .frame(width: 360)
+
+            // 区切り
+            Rectangle()
+                .fill(Theme.ink.opacity(0.08))
+                .frame(width: 1)
+
+            // 右：詳細
+            Group {
+                if let selected = members.first(where: { $0.id == selectedMemberId }) {
+                    MemberDetailView(member: selected)
+                } else {
+                    detailPlaceholder
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .onAppear {
+            if selectedMemberId == nil, let first = members.first {
+                selectedMemberId = first.id
+            }
+        }
+    }
+
+    private var detailPlaceholder: some View {
+        VStack(spacing: Theme.Space.m) {
+            Image(systemName: "person.crop.circle.dashed")
+                .font(.system(size: 72))
+                .foregroundStyle(Theme.ink.opacity(0.2))
+            Text("左から選択")
+                .font(.system(.title3, design: .rounded).weight(.bold))
+                .foregroundStyle(Theme.textSecondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private var emptyState: some View {
@@ -94,21 +176,23 @@ struct MembersView: View {
         .padding(.horizontal, Theme.Space.xl)
     }
 
-    private func row(_ m: Member, colorIndex: Int) -> some View {
+    private func row(_ m: Member, colorIndex: Int, selected: Bool) -> some View {
         HStack(spacing: Theme.Space.m) {
             Text(m.name)
                 .font(.system(.headline, design: .rounded).weight(.heavy))
                 .foregroundStyle(Theme.ink)
             Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundStyle(Theme.ink.opacity(0.3))
+            if !isPad {
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(Theme.ink.opacity(0.3))
+            }
         }
         .padding(Theme.Space.m)
-        .background(Theme.surface)
+        .background(selected ? Theme.pine.opacity(0.10) : Theme.surface)
         .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous)
-                .stroke(Theme.ink.opacity(0.06), lineWidth: 1)
+                .stroke(selected ? Theme.pine : Theme.ink.opacity(0.06), lineWidth: selected ? 2 : 1)
         )
     }
 
@@ -128,7 +212,10 @@ struct MembersView: View {
 struct MemberDetailView: View {
     @Bindable var member: Member
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) private var dismiss
     @Query private var games: [Game]
+
+    @State private var showDeleteConfirm = false
 
     var body: some View {
         ZStack {
@@ -137,6 +224,7 @@ struct MemberDetailView: View {
                 VStack(spacing: Theme.Space.l) {
                     profileBanner
                     historyCard
+                    deleteButton
                 }
                 .padding(.horizontal, Theme.Space.l)
                 .padding(.top, Theme.Space.s)
@@ -145,6 +233,41 @@ struct MemberDetailView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear { try? modelContext.save() }
+        .alert(
+            "\(member.name) を削除しますか？",
+            isPresented: $showDeleteConfirm
+        ) {
+            Button("削除", role: .destructive) {
+                modelContext.delete(member)
+                try? modelContext.save()
+                dismiss()
+            }
+            Button("キャンセル", role: .cancel) {}
+        } message: {
+            Text("このメンバーは登録から削除されます。対戦履歴は残ります。")
+        }
+    }
+
+    private var deleteButton: some View {
+        Button {
+            showDeleteConfirm = true
+        } label: {
+            HStack(spacing: 6) {
+                Image(systemName: "trash.fill")
+                Text("このメンバーを削除")
+            }
+            .font(.system(.subheadline, design: .rounded).weight(.heavy))
+            .foregroundStyle(Theme.berry)
+            .frame(maxWidth: .infinity, minHeight: 52)
+            .background(Theme.berry.opacity(0.10))
+            .clipShape(RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: Theme.Radius.medium, style: .continuous)
+                    .stroke(Theme.berry.opacity(0.35), lineWidth: 1)
+            )
+        }
+        .buttonStyle(PressableButtonStyle())
+        .padding(.top, Theme.Space.m)
     }
 
     private var profileBanner: some View {

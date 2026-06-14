@@ -16,15 +16,25 @@ struct InPlayView: View {
     /// 展開中の行（個人戦は participantIndex、チーム戦は turnIndex）
     @State private var expandedIndices: Set<Int> = []
 
+    private var isPad: Bool { hSize == .regular }
+
     var body: some View {
         ZStack {
             Theme.background.ignoresSafeArea()
             Group {
-                if hSize == .regular {
-                    HStack(spacing: 0) {
-                        scrollingInfo.frame(maxWidth: .infinity)
-                        keypadPanel.frame(maxWidth: .infinity)
+                if isPad {
+                    // iPad: 左に情報（手番カード+一覧）、右にキーパッド固定
+                    HStack(spacing: Theme.Space.l) {
+                        scrollingInfo
+                            .frame(maxWidth: .infinity)
+                        VStack {
+                            keypadPanel
+                            Spacer(minLength: 0)
+                        }
+                        .frame(width: 460)
                     }
+                    .padding(.horizontal, Theme.Space.l)
+                    .padding(.top, Theme.Space.m)
                 } else {
                     VStack(spacing: 0) {
                         scrollingInfo
@@ -71,13 +81,13 @@ struct InPlayView: View {
                 .opacity(store.events.isEmpty ? 0.35 : 1)
             }
         }
-        .confirmationDialog("ゲームを中断しますか？", isPresented: $showExitConfirm, titleVisibility: .visible) {
+        .alert("ゲームを中断しますか？", isPresented: $showExitConfirm) {
             Button("中断（保存しない）", role: .destructive) { dismiss() }
             Button("キャンセル", role: .cancel) {}
         } message: {
             Text("ここまでのスコアは記録されません。")
         }
-        .confirmationDialog("現在のスコアで結果にしますか？", isPresented: $showFinishConfirm, titleVisibility: .visible) {
+        .alert("現在のスコアで結果にしますか？", isPresented: $showFinishConfirm) {
             Button("結果へ進む") { finalizeWithCurrentScores() }
             Button("キャンセル", role: .cancel) {}
         } message: {
@@ -101,10 +111,10 @@ struct InPlayView: View {
 
     private var scrollingInfo: some View {
         ScrollView {
-            VStack(spacing: Theme.Space.m) {
+            VStack(spacing: isPad ? Theme.Space.l : Theme.Space.m) {
                 currentTurnCard
                     .padding(.top, Theme.Space.s)
-                VStack(spacing: Theme.Space.s) {
+                VStack(spacing: isPad ? Theme.Space.m : Theme.Space.s) {
                     ForEach(Array(store.teams.enumerated()), id: \.element.id) { (_, t) in
                         teamRow(t)
                     }
@@ -113,8 +123,8 @@ struct InPlayView: View {
                     }
                 }
             }
-            .padding(.horizontal, Theme.Space.l)
-            .padding(.bottom, Theme.Space.l)
+            .padding(.horizontal, isPad ? 0 : Theme.Space.l)
+            .padding(.bottom, isPad ? Theme.Space.xl : Theme.Space.l)
         }
     }
 
@@ -123,11 +133,12 @@ struct InPlayView: View {
             Keypad(
                 onTap: { store.record(points: $0) },
                 onUndo: { store.undo() },
-                canUndo: !store.events.isEmpty
+                canUndo: !store.events.isEmpty,
+                isPad: isPad
             )
-            .padding(.horizontal, Theme.Space.l)
+            .padding(.horizontal, isPad ? 0 : Theme.Space.l)
             .padding(.top, Theme.Space.s)
-            .padding(.bottom, Theme.Space.s)
+            .padding(.bottom, isPad ? Theme.Space.l : Theme.Space.s)
         }
     }
 
@@ -223,41 +234,41 @@ struct InPlayView: View {
                     )
                 )
 
-            VStack(spacing: Theme.Space.m) {
+            VStack(spacing: isPad ? Theme.Space.l : Theme.Space.m) {
                 // 名前と巨大スコアを水平配置
                 HStack(alignment: .center, spacing: Theme.Space.m) {
-                    VStack(alignment: .leading, spacing: 6) {
-                        HStack(spacing: 6) {
+                    VStack(alignment: .leading, spacing: isPad ? 10 : 6) {
+                        HStack(spacing: 8) {
                             Text(title)
-                                .font(.system(size: 32, weight: .black, design: .rounded))
+                                .font(.system(size: Theme.FontSize.heroName(isPad: isPad), weight: .black, design: .rounded))
                                 .foregroundStyle(Theme.birch)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.5)
                             if isGuest {
                                 Text("ゲスト")
-                                    .font(.system(.caption2, design: .rounded).weight(.bold))
+                                    .font(.system(isPad ? .subheadline : .caption2, design: .rounded).weight(.bold))
                                     .foregroundStyle(Theme.birch)
-                                    .padding(.horizontal, 6).padding(.vertical, 2)
+                                    .padding(.horizontal, isPad ? 10 : 6).padding(.vertical, isPad ? 4 : 2)
                                     .background(Theme.birch.opacity(0.18))
                                     .clipShape(Capsule())
                             }
                         }
                         if let thrower {
-                            HStack(spacing: 5) {
+                            HStack(spacing: 6) {
                                 Image(systemName: "figure.bowling")
                                 Text(thrower)
                             }
-                            .font(.system(.footnote, design: .rounded).weight(.semibold))
+                            .font(.system(isPad ? .title3 : .footnote, design: .rounded).weight(.semibold))
                             .foregroundStyle(Theme.ink)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 4)
+                            .padding(.horizontal, isPad ? 14 : 10)
+                            .padding(.vertical, isPad ? 6 : 4)
                             .background(Theme.birch)
                             .clipShape(Capsule())
                         }
                     }
                     Spacer(minLength: Theme.Space.s)
                     Text("\(score)")
-                        .font(.system(size: 96, weight: .black, design: .rounded).monospacedDigit())
+                        .font(.system(size: Theme.FontSize.heroScore(isPad: isPad), weight: .black, design: .rounded).monospacedDigit())
                         .foregroundStyle(Theme.birch)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
@@ -289,11 +300,11 @@ struct InPlayView: View {
                     }
                 }
             }
-            .padding(.vertical, Theme.Space.l)
-            .padding(.leading, Theme.Space.l + 12)
-            .padding(.trailing, Theme.Space.l)
+            .padding(.vertical, isPad ? Theme.Space.xl : Theme.Space.l)
+            .padding(.leading, (isPad ? Theme.Space.xl : Theme.Space.l) + 12)
+            .padding(.trailing, isPad ? Theme.Space.xl : Theme.Space.l)
         }
-        .shadow(color: Theme.ink.opacity(0.18), radius: 12, y: 6)
+        .shadow(color: Theme.ink.opacity(0.18), radius: isPad ? 18 : 12, y: isPad ? 10 : 6)
         .accessibilityElement(children: .combine)
         .accessibilityLabel(Text("手番 \(title)、スコア \(score)"))
     }
@@ -357,52 +368,52 @@ struct InPlayView: View {
                     // 左：色のサイドバー
                     Rectangle()
                         .fill(isElim ? Color.gray.opacity(0.3) : color)
-                        .frame(width: 4)
+                        .frame(width: isPad ? 6 : 4)
 
                     // 中央：名前 + 状態（左寄せ）
-                    VStack(alignment: .leading, spacing: 4) {
-                        HStack(spacing: 6) {
+                    VStack(alignment: .leading, spacing: isPad ? 6 : 4) {
+                        HStack(spacing: 8) {
                             Text(title)
-                                .font(.system(.title3, design: .rounded).weight(.bold))
+                                .font(.system(size: Theme.FontSize.rowName(isPad: isPad), weight: .bold, design: .rounded))
                                 .foregroundStyle(isElim ? Theme.textSecondary : Theme.ink)
                                 .strikethrough(isElim)
                                 .lineLimit(1)
                             if isGuest {
                                 Text("ゲスト")
-                                    .font(.system(.caption2, design: .rounded).weight(.bold))
+                                    .font(.system(isPad ? .footnote : .caption2, design: .rounded).weight(.bold))
                                     .foregroundStyle(Theme.berry)
-                                    .padding(.horizontal, 5).padding(.vertical, 1)
+                                    .padding(.horizontal, isPad ? 8 : 5).padding(.vertical, isPad ? 3 : 1)
                                     .background(Theme.berry.opacity(0.12))
                                     .clipShape(Capsule())
                             }
                         }
                         statusLine(misses: misses, isElim: isElim, finishedRank: finishedRank)
                     }
-                    .padding(.horizontal, Theme.Space.m)
+                    .padding(.horizontal, isPad ? Theme.Space.l : Theme.Space.m)
 
                     Spacer(minLength: Theme.Space.s)
 
                     // 右：直近の投擲点 + 合計スコア
-                    VStack(alignment: .trailing, spacing: 2) {
+                    VStack(alignment: .trailing, spacing: 4) {
                         Text("\(score)")
-                            .font(.system(size: 32, weight: .black, design: .rounded).monospacedDigit())
+                            .font(.system(size: Theme.FontSize.rowScore(isPad: isPad), weight: .black, design: .rounded).monospacedDigit())
                             .foregroundStyle(isElim ? Theme.textSecondary : Theme.ink)
                         if let lastPoints, !isElim {
                             miniPointBadge(lastPoints)
                         }
                     }
-                    .padding(.trailing, 6)
+                    .padding(.trailing, isPad ? Theme.Space.s : 6)
 
                     // 展開インジケーター
                     if canExpand {
                         Image(systemName: "chevron.down")
-                            .font(.caption.bold())
+                            .font(isPad ? .subheadline.bold() : .caption.bold())
                             .foregroundStyle(Theme.ink.opacity(0.35))
                             .rotationEffect(.degrees(isExpanded ? 180 : 0))
-                            .padding(.trailing, Theme.Space.s)
+                            .padding(.trailing, isPad ? Theme.Space.m : Theme.Space.s)
                     }
                 }
-                .frame(minHeight: 60)
+                .frame(minHeight: Theme.KeySize.rowMin(isPad: isPad))
             }
             .buttonStyle(.plain)
 
@@ -412,14 +423,14 @@ struct InPlayView: View {
             }
         }
         .background(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: isPad ? 18 : 14, style: .continuous)
                 .fill(Theme.surface)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: isPad ? 18 : 14, style: .continuous)
                 .stroke(Theme.ink.opacity(0.08), lineWidth: 1)
         )
-        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .clipShape(RoundedRectangle(cornerRadius: isPad ? 18 : 14, style: .continuous))
     }
 
     /// 展開時の履歴帯

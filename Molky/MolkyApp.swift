@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import UIKit
 
 @main
 struct MolkyApp: App {
@@ -16,6 +17,7 @@ struct MolkyApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .dynamicTypeSize(UIDevice.current.userInterfaceIdiom == .pad ? .xxLarge : .large)
         }
         .modelContainer(sharedModelContainer)
     }

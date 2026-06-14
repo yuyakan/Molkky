@@ -42,26 +42,16 @@ struct NewGameView: View {
 
     @State private var startedSession: GameSessionStore?
 
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var isPad: Bool { hSize == .regular }
+
     var body: some View {
         ZStack {
             Theme.background.ignoresSafeArea()
-            ScrollView {
-                VStack(spacing: Theme.Space.xl) {
-                    if mode == .individual {
-                        individualSection
-                    } else {
-                        TeamBuilderView(
-                            members: members,
-                            savedTeams: savedTeams,
-                            teams: $teamDrafts,
-                            onAddMember: { showNewMember = true }
-                        )
-                    }
-                    rulesSection
-                    startButton
-                }
-                .padding(.horizontal, Theme.Space.l)
-                .padding(.bottom, Theme.Space.xxl)
+            if isPad {
+                padLayout
+            } else {
+                phoneLayout
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -72,16 +62,78 @@ struct NewGameView: View {
                     .foregroundStyle(Theme.ink.opacity(0.7))
             }
         }
-        .alert("メンバーを追加", isPresented: $showNewMember) {
-            TextField("名前", text: $newMemberName)
-            Button("追加") { addMember() }
-            Button("キャンセル", role: .cancel) { newMemberName = "" }
+        .nameInputAlert(
+            title: "メンバーを追加",
+            isPresented: $showNewMember,
+            text: $newMemberName
+        ) { name in
+            newMemberName = name
+            addMember()
         }
         .navigationDestination(item: $startedSession) { store in
             InPlayView(store: store)
                 .navigationBarBackButtonHidden()
         }
         .onAppear { loadDefaultsIfNeeded() }
+    }
+
+    // MARK: - iPhone レイアウト
+
+    private var phoneLayout: some View {
+        ScrollView {
+            VStack(spacing: Theme.Space.xl) {
+                if mode == .individual {
+                    individualSection
+                } else {
+                    TeamBuilderView(
+                        members: members,
+                        savedTeams: savedTeams,
+                        teams: $teamDrafts,
+                        onAddMember: { showNewMember = true }
+                    )
+                }
+                rulesSection
+                startButton
+            }
+            .padding(.horizontal, Theme.Space.l)
+            .padding(.bottom, Theme.Space.xxl)
+        }
+    }
+
+    // MARK: - iPad 2カラムレイアウト
+
+    private var padLayout: some View {
+        HStack(alignment: .top, spacing: Theme.Space.xl) {
+            // 左カラム: 参加者選択
+            ScrollView {
+                VStack(spacing: Theme.Space.l) {
+                    if mode == .individual {
+                        individualSection
+                    } else {
+                        TeamBuilderView(
+                            members: members,
+                            savedTeams: savedTeams,
+                            teams: $teamDrafts,
+                            onAddMember: { showNewMember = true }
+                        )
+                    }
+                }
+                .padding(.bottom, Theme.Space.xxl)
+            }
+            .frame(maxWidth: .infinity)
+
+            // 右カラム: ルール + 開始ボタン
+            VStack(spacing: Theme.Space.l) {
+                ScrollView {
+                    rulesSection
+                        .padding(.bottom, Theme.Space.m)
+                }
+                startButton
+            }
+            .frame(width: 520)
+        }
+        .padding(.horizontal, Theme.Space.xl)
+        .padding(.top, Theme.Space.m)
     }
 
     private var pageHeader: some View {
@@ -366,13 +418,13 @@ struct NewGameView: View {
 
     private var rulesSection: some View {
         TicketCard(accent: Theme.berry) {
-            VStack(alignment: .leading, spacing: Theme.Space.m) {
+            VStack(alignment: .leading, spacing: isPad ? Theme.Space.l : Theme.Space.m) {
                 SectionHeader(number: mode == .individual && selectedOrder.count >= 2 ? 4 : 3, title: "ルール")
                 presetChips
                 Rectangle()
                     .fill(Theme.ink.opacity(0.06))
                     .frame(height: 1)
-                VStack(spacing: Theme.Space.s) {
+                VStack(spacing: isPad ? Theme.Space.m : Theme.Space.s) {
                     stepperRow(icon: "target", iconColor: Theme.pine, label: "目標点", value: targetScore, range: 10...100, step: 5, binding: $targetScore)
                     stepperRow(icon: "arrow.uturn.down", iconColor: Theme.sky, label: "超過時", value: overshootResetTo, range: 0...targetScore, step: 5, binding: $overshootResetTo)
                     missPolicyPicker
@@ -394,26 +446,26 @@ struct NewGameView: View {
 
     private var presetChips: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: Theme.Space.s) {
+            HStack(spacing: isPad ? Theme.Space.m : Theme.Space.s) {
                 ForEach(RulePreset.allCases) { preset in
                     Button {
                         applyPreset(preset)
                     } label: {
-                        VStack(alignment: .leading, spacing: 2) {
+                        VStack(alignment: .leading, spacing: isPad ? 4 : 2) {
                             Text(preset.name)
-                                .font(.system(.subheadline, design: .rounded).weight(.heavy))
+                                .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.heavy))
                             Text(preset.shortInfo)
-                                .font(.caption2.weight(.semibold))
+                                .font(.system(isPad ? .subheadline : .caption2, design: .rounded).weight(.semibold))
                         }
                         .foregroundStyle(isCurrent(preset) ? .white : Theme.ink)
-                        .padding(.horizontal, Theme.Space.m)
-                        .padding(.vertical, Theme.Space.s)
+                        .padding(.horizontal, isPad ? Theme.Space.l : Theme.Space.m)
+                        .padding(.vertical, isPad ? Theme.Space.m : Theme.Space.s)
                         .background(
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            RoundedRectangle(cornerRadius: isPad ? 16 : 12, style: .continuous)
                                 .fill(isCurrent(preset) ? AnyShapeStyle(Theme.inkGradient) : AnyShapeStyle(Theme.surface))
                         )
                         .overlay(
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            RoundedRectangle(cornerRadius: isPad ? 16 : 12, style: .continuous)
                                 .stroke(isCurrent(preset) ? Color.clear : Theme.ink.opacity(0.10), lineWidth: 1)
                         )
                     }
@@ -425,25 +477,26 @@ struct NewGameView: View {
     }
 
     private var missPolicyPicker: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(alignment: .leading, spacing: isPad ? 10 : 6) {
             HStack(spacing: Theme.Space.s) {
                 Image(systemName: "xmark.octagon.fill")
+                    .font(isPad ? .title3 : .body)
                     .foregroundStyle(missPolicy == .none ? Theme.textSecondary : Theme.berry)
-                    .frame(width: 22)
+                    .frame(width: isPad ? 32 : 22)
                 Text("連続ミス時")
-                    .font(.system(.subheadline, design: .rounded).weight(.bold))
+                    .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.bold))
                     .foregroundStyle(Theme.ink)
                 Spacer()
             }
-            HStack(spacing: 6) {
+            HStack(spacing: isPad ? 8 : 6) {
                 ForEach(MissPolicy.allCases, id: \.self) { p in
                     Button {
                         missPolicy = p
                     } label: {
                         Text(p.label)
-                            .font(.caption.weight(.heavy))
+                            .font(.system(isPad ? .subheadline : .caption, design: .rounded).weight(.heavy))
                             .foregroundStyle(missPolicy == p ? .white : Theme.ink)
-                            .padding(.horizontal, 10).padding(.vertical, 6)
+                            .padding(.horizontal, isPad ? 14 : 10).padding(.vertical, isPad ? 10 : 6)
                             .background(
                                 Capsule().fill(missPolicy == p ? Theme.berry : Theme.surface)
                             )
@@ -455,9 +508,9 @@ struct NewGameView: View {
                 }
             }
             Text(missPolicy.shortDescription)
-                .font(.caption2)
+                .font(.system(isPad ? .subheadline : .caption2, design: .rounded))
                 .foregroundStyle(Theme.textSecondary)
-                .padding(.leading, 30)
+                .padding(.leading, isPad ? 40 : 30)
         }
     }
 
@@ -477,22 +530,24 @@ struct NewGameView: View {
     private func stepperRow(icon: String, iconColor: Color, label: String, value: Int, range: ClosedRange<Int>, step: Int, binding: Binding<Int>) -> some View {
         HStack(spacing: Theme.Space.s) {
             Image(systemName: icon)
+                .font(isPad ? .title3 : .body)
                 .foregroundStyle(iconColor)
-                .frame(width: 22)
+                .frame(width: isPad ? 32 : 22)
             Text(label)
-                .font(.system(.subheadline, design: .rounded).weight(.bold))
+                .font(.system(isPad ? .title3 : .subheadline, design: .rounded).weight(.bold))
                 .foregroundStyle(Theme.ink)
             Spacer()
-            HStack(spacing: 4) {
+            HStack(spacing: isPad ? 8 : 4) {
                 Text("\(value)")
-                    .font(.system(.title3, design: .rounded).weight(.heavy).monospacedDigit())
-                    .frame(minWidth: 36)
+                    .font(.system(isPad ? .largeTitle : .title3, design: .rounded).weight(.heavy).monospacedDigit())
+                    .frame(minWidth: isPad ? 56 : 36)
                     .foregroundStyle(Theme.ink)
                 Stepper("", value: binding, in: range, step: step)
                     .labelsHidden()
+                    .scaleEffect(isPad ? 1.15 : 1.0)
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, isPad ? 8 : 4)
     }
 
     private var startButton: some View {
@@ -501,9 +556,11 @@ struct NewGameView: View {
         } label: {
             HStack(spacing: Theme.Space.s) {
                 Image(systemName: "play.fill")
+                    .font(isPad ? .title2 : .headline)
                 Text(startButtonTitle)
-                    .font(.system(.title3, design: .rounded).weight(.heavy))
+                    .font(.system(isPad ? .title : .title3, design: .rounded).weight(.heavy))
             }
+            .padding(.vertical, isPad ? 6 : 0)
         }
         .buttonStyle(PrimaryActionStyle(
             fill: AnyShapeStyle(canStart ? AnyShapeStyle(Theme.inkGradient) : AnyShapeStyle(Theme.ink.opacity(0.25))),

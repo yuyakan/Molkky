@@ -6,6 +6,9 @@ struct SettingsView: View {
     @AppStorage("default.maxConsecutiveMisses") private var defaultMaxMisses: Int = 3
     @AppStorage("default.missPolicy") private var defaultMissPolicyRaw: String = MissPolicy.eliminate.rawValue
 
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var isPad: Bool { hSize == .regular }
+
     private var defaultMissPolicy: MissPolicy {
         MissPolicy(rawValue: defaultMissPolicyRaw) ?? .eliminate
     }
@@ -18,7 +21,7 @@ struct SettingsView: View {
                     defaultRulesCard
                     aboutCard
                 }
-                .padding(.horizontal, Theme.Space.l)
+                .padding(.horizontal, isPad ? Theme.Space.xxl : Theme.Space.l)
                 .padding(.top, Theme.Space.s)
                 .padding(.bottom, Theme.Space.xl)
             }
