@@ -4,37 +4,6 @@
     "": {
       "localizations": {}
     },
-    "—": {
-      "localizations": {}
-    },
-    "（未入力で「相手チーム」扱い）": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "(Treated as \"Opponents\" if blank)"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "(Tyhjänä käsitellään \"Vastustajana\")"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "(Pokud je prázdné, považuje se za „Soupeřův tým“)"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "(Leer wird als „Gegnerteam“ behandelt)"
-          }
-        }
-      }
-    },
     "%@ を削除しますか？": {
       "localizations": {
         "en": {
@@ -585,170 +554,33 @@
     "v%@": {
       "localizations": {}
     },
-    "キャンセル": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancel"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Peruuta"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zrušit"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbrechen"
-          }
-        }
-      }
+    "—": {
+      "localizations": {}
     },
-    "ゲームを中断しますか？": {
+    "あとで": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quit this game?"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lopetetaanko peli?"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ukončit tuto hru?"
+            "value": "Později"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spiel beenden?"
+            "value": "Später"
           }
-        }
-      }
-    },
-    "ゲームを完了するとここに表示されます。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Finished games will appear here."
+            "value": "Later"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päättyneet pelit näkyvät täällä."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dokončené hry se zobrazí zde."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abgeschlossene Spiele erscheinen hier."
-          }
-        }
-      }
-    },
-    "ゲスト": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Guest"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vieras"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Host"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gast"
-          }
-        }
-      }
-    },
-    "ゲスト%lld": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Guest %lld"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vieras %lld"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Host %lld"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gast %lld"
-          }
-        }
-      }
-    },
-    "ゲスト参加者を追加": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add guest player"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lisää vieraspelaaja"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Přidat hostujícího hráče"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gastspieler hinzufügen"
+            "value": "Myöhemmin"
           }
         }
       }
@@ -949,6 +781,230 @@
         }
       }
     },
+    "その人/チームが脱落": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "That player/team is eliminated"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kyseinen pelaaja tai joukkue putoaa"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hráč nebo tým je vyřazen"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spieler oder Team scheidet aus"
+          }
+        }
+      }
+    },
+    "よく使う編成を保存すると、ゲーム開始時にタップだけで再現できます。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save your frequent lineups so you can recreate them with one tap when starting a game."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallenna usein käyttämäsi kokoonpanot, niin voit ottaa ne käyttöön yhdellä napautuksella."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uložte si často používané sestavy a načtěte je při startu hry jedním klepnutím."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speichere häufig genutzte Aufstellungen und übernimm sie beim Spielstart mit einem Tipp."
+          }
+        }
+      }
+    },
+    "キャンセル": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Peruuta"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zrušit"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbrechen"
+          }
+        }
+      }
+    },
+    "ゲスト": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guest"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vieras"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Host"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gast"
+          }
+        }
+      }
+    },
+    "ゲスト%lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guest %lld"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vieras %lld"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Host %lld"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gast %lld"
+          }
+        }
+      }
+    },
+    "ゲスト参加者を追加": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add guest player"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää vieraspelaaja"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Přidat hostujícího hráče"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gastspieler hinzufügen"
+          }
+        }
+      }
+    },
+    "ゲームを中断しますか？": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit this game?"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lopetetaanko peli?"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukončit tuto hru?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spiel beenden?"
+          }
+        }
+      }
+    },
+    "ゲームを完了するとここに表示されます。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finished games will appear here."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Päättyneet pelit näkyvät täällä."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dokončené hry se zobrazí zde."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abgeschlossene Spiele erscheinen hier."
+          }
+        }
+      }
+    },
     "ショート": {
       "localizations": {
         "en": {
@@ -1061,30 +1117,31 @@
         }
       }
     },
-    "その人/チームが脱落": {
+    "チケット": {
+      "extractionState": "stale",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "That player/team is eliminated"
+            "value": "Ticket"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kyseinen pelaaja tai joukkue putoaa"
+            "value": "Lippu"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hráč nebo tým je vyřazen"
+            "value": "Lístek"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Spieler oder Team scheidet aus"
+            "value": "Ticket"
           }
         }
       }
@@ -1337,35 +1394,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Teamspiel"
-          }
-        }
-      }
-    },
-    "チケット": {
-      "extractionState": "stale",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ticket"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lippu"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lístek"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ticket"
           }
         }
       }
@@ -1706,34 +1734,6 @@
         }
       }
     },
-    "モード": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mode"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tila"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Režim"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modus"
-          }
-        }
-      }
-    },
     "モルックの公式ルールに沿ったスコアアプリ。屋外でも見やすい大きな数字表示と、メンバー登録による戦績管理が特長です。": {
       "localizations": {
         "en": {
@@ -1762,30 +1762,30 @@
         }
       }
     },
-    "よく使う編成を保存すると、ゲーム開始時にタップだけで再現できます。": {
+    "モード": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Save your frequent lineups so you can recreate them with one tap when starting a game."
+            "value": "Mode"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna usein käyttämäsi kokoonpanot, niin voit ottaa ne käyttöön yhdellä napautuksella."
+            "value": "Tila"
           }
         },
         "cs": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uložte si často používané sestavy a načtěte je při startu hry jedním klepnutím."
+            "value": "Režim"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Speichere häufig genutzte Aufstellungen und übernimm sie beim Spielstart mit einem Tipp."
+            "value": "Modus"
           }
         }
       }
@@ -1814,6 +1814,62 @@
           "stringUnit": {
             "state": "translated",
             "value": "Regeln"
+          }
+        }
+      }
+    },
+    "レビューであなたの感想を聞かせてください。アプリの改善にとても役立ちます。": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Napište nám svůj názor v recenzi. Velmi nám to pomáhá aplikaci zlepšovat."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sag uns deine Meinung in einer Bewertung. Das hilft uns sehr, die App zu verbessern."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tell us what you think in a review. It really helps us improve the app."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kerro mielipiteesi arvostelussa. Se auttaa meitä kehittämään sovellusta."
+          }
+        }
+      }
+    },
+    "レビューを書く": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Napsat recenzi"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewertung schreiben"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Write a Review"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirjoita arvostelu"
           }
         }
       }
@@ -2123,90 +2179,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Revanche"
-          }
-        }
-      }
-    },
-    "最初のゲームを始めましょう": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Let's start your first game"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aloitetaan ensimmäinen peli"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Začněme první hru"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Starten wir das erste Spiel"
-          }
-        }
-      }
-    },
-    "最終順位": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Final ranking"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lopullinen sijoitus"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Konečné pořadí"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Endplatzierung"
-          }
-        }
-      }
-    },
-    "最高得点のプレイヤー/チームが勝者として記録されます。": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The player/team with the highest score will be recorded as the winner."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eniten pisteitä saanut pelaaja tai joukkue tallennetaan voittajaksi."
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hráč nebo tým s nejvyšším skóre bude zaznamenán jako vítěz."
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Der Spieler oder das Team mit der höchsten Punktzahl wird als Sieger eingetragen."
           }
         }
       }
@@ -2883,34 +2855,6 @@
         }
       }
     },
-    "手番順（長押しで並べ替え）": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Turn order (long-press to reorder)"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Heittojärjestys (pitkä painallus järjestää)"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pořadí hodů (dlouhým stiskem přesunete)"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wurfreihenfolge (lang drücken zum Sortieren)"
-          }
-        }
-      }
-    },
     "手番順は対戦開始時に決定します": {
       "localizations": {
         "en": {
@@ -2935,6 +2879,34 @@
           "stringUnit": {
             "state": "translated",
             "value": "Die Wurfreihenfolge wird zu Spielbeginn festgelegt"
+          }
+        }
+      }
+    },
+    "手番順（長押しで並べ替え）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn order (long-press to reorder)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heittojärjestys (pitkä painallus järjestää)"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pořadí hodů (dlouhým stiskem přesunete)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wurfreihenfolge (lang drücken zum Sortieren)"
           }
         }
       }
@@ -2995,34 +2967,6 @@
         }
       }
     },
-    "投擲順（長押しで並べ替え）": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Throw order (long-press to reorder)"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Heittojärjestys (pitkä painallus järjestää)"
-          }
-        },
-        "cs": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pořadí hodů (dlouhým stiskem přesunete)"
-          }
-        },
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wurfreihenfolge (lang drücken zum Sortieren)"
-          }
-        }
-      }
-    },
     "投擲順は対戦中にローテーションされます": {
       "localizations": {
         "en": {
@@ -3047,6 +2991,34 @@
           "stringUnit": {
             "state": "translated",
             "value": "Die Wurfreihenfolge rotiert während des Spiels"
+          }
+        }
+      }
+    },
+    "投擲順（長押しで並べ替え）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Throw order (long-press to reorder)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heittojärjestys (pitkä painallus järjestää)"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pořadí hodů (dlouhým stiskem přesunete)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wurfreihenfolge (lang drücken zum Sortieren)"
           }
         }
       }
@@ -3191,6 +3163,90 @@
         }
       }
     },
+    "最初のゲームを始めましょう": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Let's start your first game"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aloitetaan ensimmäinen peli"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Začněme první hru"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten wir das erste Spiel"
+          }
+        }
+      }
+    },
+    "最終順位": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Final ranking"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lopullinen sijoitus"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konečné pořadí"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Endplatzierung"
+          }
+        }
+      }
+    },
+    "最高得点のプレイヤー/チームが勝者として記録されます。": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The player/team with the highest score will be recorded as the winner."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eniten pisteitä saanut pelaaja tai joukkue tallennetaan voittajaksi."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hráč nebo tým s nejvyšším skóre bude zaznamenán jako vítěz."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Der Spieler oder das Team mit der höchsten Punktzahl wird als Sieger eingetragen."
+          }
+        }
+      }
+    },
     "未命名チーム": {
       "localizations": {
         "en": {
@@ -3271,6 +3327,34 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nicht gespeichert"
+          }
+        }
+      }
+    },
+    "楽しんでいただけていますか？": {
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baví vás hra?"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gefällt dir das Spiel?"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enjoying the game?"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pidätkö pelistä?"
           }
         }
       }
@@ -3831,6 +3915,34 @@
           "stringUnit": {
             "state": "translated",
             "value": "Schließen"
+          }
+        }
+      }
+    },
+    "（未入力で「相手チーム」扱い）": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Treated as \"Opponents\" if blank)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Tyhjänä käsitellään \"Vastustajana\")"
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Pokud je prázdné, považuje se za „Soupeřův tým“)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Leer wird als „Gegnerteam“ behandelt)"
           }
         }
       }

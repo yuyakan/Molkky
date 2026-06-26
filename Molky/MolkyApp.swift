@@ -1,9 +1,17 @@
 import SwiftUI
 import SwiftData
 import UIKit
+import GoogleMobileAds
 
 @main
 struct MolkyApp: App {
+    init() {
+        // Google Mobile Ads SDK を初期化し、最初のインタースティシャル広告を先読みする
+        MobileAds.shared.start { _ in
+            InterstitialAdManager.shared.loadAd()
+        }
+    }
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([Member.self, Game.self, Team.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)

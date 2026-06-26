@@ -9,7 +9,12 @@
       "Bash(xcrun simctl *)",
       "Bash(DEVELOPER_DIR=/Applications/Xcode-26.3.0.app/Contents/Developer xcrun simctl list devices booted)",
       "Bash(DEVELOPER_DIR=/Applications/Xcode-26.3.0.app/Contents/Developer xcrun simctl *)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(/usr/libexec/PlistBuddy *)",
+      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -sdk iphonesimulator -configuration Debug -destination 'generic/platform=iOS Simulator' build)",
+      "Bash(plutil -lint Molky/Info.plist)",
+      "Bash(plutil *)",
+      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -sdk iphonesimulator -configuration Debug build CODE_SIGNING_ALLOWED=NO)"
     ]
   }
 }
