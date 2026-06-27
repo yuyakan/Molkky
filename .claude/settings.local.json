@@ -14,7 +14,8 @@
       "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -sdk iphonesimulator -configuration Debug -destination 'generic/platform=iOS Simulator' build)",
       "Bash(plutil -lint Molky/Info.plist)",
       "Bash(plutil *)",
-      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -sdk iphonesimulator -configuration Debug build CODE_SIGNING_ALLOWED=NO)"
+      "Bash(xcodebuild -project Molky.xcodeproj -scheme Molky -sdk iphonesimulator -configuration Debug build CODE_SIGNING_ALLOWED=NO)",
+      "Bash(grep -rn \"apps.apple.com\\\\|itunes.apple.com\\\\|appStoreID\\\\|APP_STORE\\\\|id[0-9]\\\\{8,\\\\}\" /Users/uebetsunawayuuya/Molky --include=\"*.swift\" --include=\"*.plist\" --include=\"*.bundle\" --include=\"*.xcstrings\" -i)"
     ]
   }
 }

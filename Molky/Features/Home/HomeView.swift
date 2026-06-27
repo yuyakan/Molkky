@@ -176,9 +176,13 @@ struct HomeView: View {
                 Text(title)
                     .font(.system(size: isPad ? 44 : 22, weight: .black, design: .rounded))
                     .foregroundStyle(foreground)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
                 Text(subtitle)
                     .font(.system(isPad ? .title3 : .caption, design: .rounded).weight(.semibold))
                     .foregroundStyle(foreground.opacity(0.75))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
                 HStack {
                     Spacer()
                     ZStack {

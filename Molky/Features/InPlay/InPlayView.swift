@@ -405,14 +405,14 @@ struct InPlayView: View {
 
                     Spacer(minLength: Theme.Space.s)
 
-                    // 右：直近の投擲点 + 合計スコア
-                    VStack(alignment: .trailing, spacing: 4) {
-                        Text("\(score)")
-                            .font(.system(size: Theme.FontSize.rowScore(isPad: isPad), weight: .black, design: .rounded).monospacedDigit())
-                            .foregroundStyle(isElim ? Theme.textSecondary : Theme.ink)
+                    // 右：直近の投擲点（左）+ 合計スコア（右、広め）
+                    HStack(alignment: .center, spacing: isPad ? Theme.Space.m : Theme.Space.s) {
                         if let lastPoints, !isElim {
                             miniPointBadge(lastPoints)
                         }
+                        Text("\(score)")
+                            .font(.system(size: Theme.FontSize.rowScore(isPad: isPad), weight: .black, design: .rounded).monospacedDigit())
+                            .foregroundStyle(isElim ? Theme.textSecondary : Theme.ink)
                     }
                     .padding(.trailing, isPad ? Theme.Space.s : 6)
 

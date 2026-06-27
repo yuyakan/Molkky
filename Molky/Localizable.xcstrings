@@ -6,18 +6,6 @@
     },
     "%@ を削除しますか？": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete %@?"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Poistetaanko %@?"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -29,23 +17,47 @@
             "state": "translated",
             "value": "%@ löschen?"
           }
-        }
-      }
-    },
-    "%@チーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Team %@"
+            "value": "Delete %@?"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kustutada %@?"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joukkue %@"
+            "value": "Poistetaanko %@?"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminare %@?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usunąć %@?"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radera %@?"
+          }
+        }
+      }
+    },
+    "%@チーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -57,6 +69,42 @@
             "state": "translated",
             "value": "Team %@"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Team %@"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiim %@"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Joukkue %@"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squadra %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drużyna %@"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lag %@"
+          }
         }
       }
     },
@@ -65,18 +113,6 @@
     },
     "%lld チーム参加 · 未完了": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld teams · Unfinished"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld joukkuetta · Kesken"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -88,23 +124,47 @@
             "state": "translated",
             "value": "%lld Teams · Unvollständig"
           }
-        }
-      }
-    },
-    "%lld 人参加 · 未完了": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld players · Unfinished"
+            "value": "%lld teams · Unfinished"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld tiimi · Lõpetamata"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld pelaajaa · Kesken"
+            "value": "%lld joukkuetta · Kesken"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld squadre · Incompiuta"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld drużyn · Niezakończona"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld lag · Ej slutfört"
+          }
+        }
+      }
+    },
+    "%lld 人参加 · 未完了": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -116,23 +176,47 @@
             "state": "translated",
             "value": "%lld Spieler · Unvollständig"
           }
-        }
-      }
-    },
-    "%lld 投": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld throws"
+            "value": "%lld players · Unfinished"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld mängijat · Lõpetamata"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld heittoa"
+            "value": "%lld pelaajaa · Kesken"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld giocatori · Incompiuta"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld graczy · Niezakończona"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld spelare · Ej slutfört"
+          }
+        }
+      }
+    },
+    "%lld 投": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -144,23 +228,47 @@
             "state": "translated",
             "value": "%lld Würfe"
           }
-        }
-      }
-    },
-    "%lldチームでゲーム開始": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start game with %lld teams"
+            "value": "%lld throws"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld viset"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aloita peli (%lld joukkuetta)"
+            "value": "%lld heittoa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld lanci"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld rzutów"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld kast"
+          }
+        }
+      }
+    },
+    "%lldチームでゲーム開始": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -172,23 +280,47 @@
             "state": "translated",
             "value": "Spiel mit %lld Teams starten"
           }
-        }
-      }
-    },
-    "%lld人でゲーム開始": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start game with %lld players"
+            "value": "Start game with %lld teams"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alusta mängu %lld tiimiga"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aloita peli (%lld pelaajaa)"
+            "value": "Aloita peli (%lld joukkuetta)"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inizia partita con %lld squadre"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozpocznij grę z %lld drużynami"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starta spel med %lld lag"
+          }
+        }
+      }
+    },
+    "%lld人でゲーム開始": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -200,23 +332,47 @@
             "state": "translated",
             "value": "Spiel mit %lld Spielern starten"
           }
-        }
-      }
-    },
-    "%lld位": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "#%lld"
+            "value": "Start game with %lld players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alusta mängu %lld mängijaga"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sija %lld"
+            "value": "Aloita peli (%lld pelaajaa)"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inizia partita con %lld giocatori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozpocznij grę z %lld graczami"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starta spel med %lld spelare"
+          }
+        }
+      }
+    },
+    "%lld位": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -228,23 +384,47 @@
             "state": "translated",
             "value": "Platz %lld"
           }
-        }
-      }
-    },
-    "%lld回連続で0リセット": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset to 0 after %lld misses"
+            "value": "#%lld"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nollaa pisteet %lld huti­heiton jälkeen"
+            "value": "Sija %lld"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "#%lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "#%lld"
+          }
+        }
+      }
+    },
+    "%lld回連続で0リセット": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -256,23 +436,47 @@
             "state": "translated",
             "value": "Nach %lld Fehlwürfen auf 0 zurücksetzen"
           }
-        }
-      }
-    },
-    "%lld回連続で失格": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Disqualified after %lld misses"
+            "value": "Reset to 0 after %lld misses"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nullitakse pärast %lld möödaviset"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Putoa %lld huti­heiton jälkeen"
+            "value": "Nollaa pisteet %lld huti­heiton jälkeen"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Azzeramento dopo %lld errori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset do 0 po %lld pudłach"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nollställs efter %lld missar"
+          }
+        }
+      }
+    },
+    "%lld回連続で失格": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -284,23 +488,47 @@
             "state": "translated",
             "value": "Nach %lld Fehlwürfen ausgeschieden"
           }
-        }
-      }
-    },
-    "%lld投前": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld throws ago"
+            "value": "Disqualified after %lld misses"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diskvalifitseeritakse pärast %lld möödaviset"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld heittoa sitten"
+            "value": "Putoa %lld huti­heiton jälkeen"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squalifica dopo %lld errori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dyskwalifikacja po %lld pudłach"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diskvalificeras efter %lld missar"
+          }
+        }
+      }
+    },
+    "%lld投前": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -312,23 +540,47 @@
             "state": "translated",
             "value": "Vor %lld Würfen"
           }
-        }
-      }
-    },
-    "%lld点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld pts"
+            "value": "%lld throws ago"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld viset tagasi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld pistettä"
+            "value": "%lld heittoa sitten"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld lanci fa"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld rzutów temu"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld kast sedan"
+          }
+        }
+      }
+    },
+    "%lld点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -340,23 +592,47 @@
             "state": "translated",
             "value": "%lld Punkte"
           }
-        }
-      }
-    },
-    "%lld番手": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Order #%lld"
+            "value": "%lld pts"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld p"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vuoro #%lld"
+            "value": "%lld pistettä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld pt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld pkt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld p"
+          }
+        }
+      }
+    },
+    "%lld番手": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -368,6 +644,42 @@
             "state": "translated",
             "value": "Reihenfolge #%lld"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order #%lld"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Järjekord %lld."
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vuoro #%lld"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordine #%lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolejność %lld."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordning #%lld"
+          }
         }
       }
     },
@@ -376,18 +688,6 @@
     },
     "1人ずつ得点": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Score one player at a time"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pelaajat pisteyttävät yksitellen"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -399,23 +699,47 @@
             "state": "translated",
             "value": "Spieler einzeln punkten"
           }
-        }
-      }
-    },
-    "2チーム以上を追加": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add 2 or more teams"
+            "value": "Score one player at a time"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punktid ühe mängija kaupa"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää vähintään 2 joukkuetta"
+            "value": "Pelaajat pisteyttävät yksitellen"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punteggio un giocatore alla volta"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punktacja gracz po graczu"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poäng en spelare i taget"
+          }
+        }
+      }
+    },
+    "2チーム以上を追加": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -427,23 +751,47 @@
             "state": "translated",
             "value": "Mindestens 2 Teams hinzufügen"
           }
-        }
-      }
-    },
-    "2人以上を選択": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select 2 or more players"
+            "value": "Add 2 or more teams"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa 2 või rohkem tiimi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Valitse vähintään 2 pelaajaa"
+            "value": "Lisää vähintään 2 joukkuetta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi 2 o più squadre"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj 2 lub więcej drużyn"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till 2 eller fler lag"
+          }
+        }
+      }
+    },
+    "2人以上を選択": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -455,23 +803,47 @@
             "state": "translated",
             "value": "Mindestens 2 Spieler auswählen"
           }
-        }
-      }
-    },
-    "30点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 pts"
+            "value": "Select 2 or more players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vali 2 või rohkem mängijat"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "30 pistettä"
+            "value": "Valitse vähintään 2 pelaajaa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seleziona 2 o più giocatori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz 2 lub więcej graczy"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Välj 2 eller fler spelare"
+          }
+        }
+      }
+    },
+    "30点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -483,23 +855,47 @@
             "state": "translated",
             "value": "30 Punkte"
           }
-        }
-      }
-    },
-    "50点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "50 pts"
+            "value": "30 pts"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 p"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "50 pistettä"
+            "value": "30 pistettä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 pt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 pkt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 p"
+          }
+        }
+      }
+    },
+    "50点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -511,23 +907,47 @@
             "state": "translated",
             "value": "50 Punkte"
           }
-        }
-      }
-    },
-    "70点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "70 pts"
+            "value": "50 pts"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "50 p"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "70 pistettä"
+            "value": "50 pistettä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "50 pt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "50 pkt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "50 p"
+          }
+        }
+      }
+    },
+    "70点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -538,6 +958,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "70 Punkte"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "70 pts"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "70 p"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "70 pistettä"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "70 pt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "70 pkt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "70 p"
           }
         }
       }
@@ -577,28 +1033,40 @@
             "value": "Later"
           }
         },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiljem"
+          }
+        },
         "fi": {
           "stringUnit": {
             "state": "translated",
             "value": "Myöhemmin"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Più tardi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Później"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senare"
           }
         }
       }
     },
     "ここまでのスコアは記録されません。": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scores so far will not be saved."
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tähän asti saatuja pisteitä ei tallenneta."
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -610,23 +1078,47 @@
             "state": "translated",
             "value": "Bisheriger Punktestand wird nicht gespeichert."
           }
-        }
-      }
-    },
-    "このチーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This team"
+            "value": "Scores so far will not be saved."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seniseid tulemusi ei salvestata."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tämä joukkue"
+            "value": "Tähän asti saatuja pisteitä ei tallenneta."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I punteggi finora non verranno salvati."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dotychczasowe wyniki nie zostaną zapisane."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poängen hittills sparas inte."
+          }
+        }
+      }
+    },
+    "このチーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -638,23 +1130,47 @@
             "state": "translated",
             "value": "Dieses Team"
           }
-        }
-      }
-    },
-    "このチームを保存": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Save this team"
+            "value": "This team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna tämä joukkue"
+            "value": "Tämä joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questa squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta drużyna"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detta lag"
+          }
+        }
+      }
+    },
+    "このチームを保存": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -666,23 +1182,47 @@
             "state": "translated",
             "value": "Dieses Team speichern"
           }
-        }
-      }
-    },
-    "このチームを削除": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Delete this team"
+            "value": "Save this team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvesta see tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poista tämä joukkue"
+            "value": "Tallenna tämä joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva questa squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz tę drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spara detta lag"
+          }
+        }
+      }
+    },
+    "このチームを削除": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -694,23 +1234,47 @@
             "state": "translated",
             "value": "Dieses Team löschen"
           }
-        }
-      }
-    },
-    "このメンバーは登録から削除されます。対戦履歴は残ります。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This player will be removed from your roster. Past game records will remain."
+            "value": "Delete this team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kustuta see tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tämä pelaaja poistetaan listalta. Pelihistoria säilyy."
+            "value": "Poista tämä joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina questa squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń tę drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radera detta lag"
+          }
+        }
+      }
+    },
+    "このメンバーは登録から削除されます。対戦履歴は残ります。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -722,23 +1286,47 @@
             "state": "translated",
             "value": "Dieser Spieler wird aus der Liste entfernt. Spielverlauf bleibt erhalten."
           }
-        }
-      }
-    },
-    "このメンバーを削除": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Delete this player"
+            "value": "This player will be removed from your roster. Past game records will remain."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mängija eemaldatakse nimekirjast. Varasemad mängud jäävad alles."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poista tämä pelaaja"
+            "value": "Tämä pelaaja poistetaan listalta. Pelihistoria säilyy."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il giocatore verrà rimosso dall'elenco. I risultati passati rimarranno."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gracz zostanie usunięty z listy. Historia gier pozostanie."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spelaren tas bort från din lista. Tidigare spelresultat finns kvar."
+          }
+        }
+      }
+    },
+    "このメンバーを削除": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -750,23 +1338,47 @@
             "state": "translated",
             "value": "Diesen Spieler löschen"
           }
-        }
-      }
-    },
-    "これらの値は新規ゲーム作成時の初期値として使用されます。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "These values will be used as defaults when starting a new game."
+            "value": "Delete this player"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kustuta mängija"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Näitä arvoja käytetään oletuksina uutta peliä aloitettaessa."
+            "value": "Poista tämä pelaaja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina giocatore"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń gracza"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radera spelaren"
+          }
+        }
+      }
+    },
+    "これらの値は新規ゲーム作成時の初期値として使用されます。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -778,23 +1390,47 @@
             "state": "translated",
             "value": "Diese Werte werden als Standard für neue Spiele verwendet."
           }
-        }
-      }
-    },
-    "その人/チームが脱落": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "That player/team is eliminated"
+            "value": "These values will be used as defaults when starting a new game."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Neid väärtusi kasutatakse vaikeväärtustena uue mängu alustamisel."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kyseinen pelaaja tai joukkue putoaa"
+            "value": "Näitä arvoja käytetään oletuksina uutta peliä aloitettaessa."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Questi valori verranno usati come predefiniti all'avvio di una nuova partita."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te wartości będą używane jako domyślne przy rozpoczynaniu nowej gry."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dessa värden används som standard när du startar ett nytt spel."
+          }
+        }
+      }
+    },
+    "その人/チームが脱落": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -806,23 +1442,47 @@
             "state": "translated",
             "value": "Spieler oder Team scheidet aus"
           }
-        }
-      }
-    },
-    "よく使う編成を保存すると、ゲーム開始時にタップだけで再現できます。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Save your frequent lineups so you can recreate them with one tap when starting a game."
+            "value": "That player/team is eliminated"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See mängija/tiim langeb välja"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna usein käyttämäsi kokoonpanot, niin voit ottaa ne käyttöön yhdellä napautuksella."
+            "value": "Kyseinen pelaaja tai joukkue putoaa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quel giocatore/squadra è eliminato"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten gracz/drużyna odpada"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Den spelaren/laget slås ut"
+          }
+        }
+      }
+    },
+    "よく使う編成を保存すると、ゲーム開始時にタップだけで再現できます。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -834,23 +1494,47 @@
             "state": "translated",
             "value": "Speichere häufig genutzte Aufstellungen und übernimm sie beim Spielstart mit einem Tipp."
           }
-        }
-      }
-    },
-    "キャンセル": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cancel"
+            "value": "Save your frequent lineups so you can recreate them with one tap when starting a game."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvesta sageli kasutatavad koosseisud, et neid mängu alustamisel ühe puudutusega taastada."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Peruuta"
+            "value": "Tallenna usein käyttämäsi kokoonpanot, niin voit ottaa ne käyttöön yhdellä napautuksella."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salva le formazioni che usi spesso per ricrearle con un tocco all'inizio della partita."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz często używane składy, aby odtworzyć je jednym dotknięciem przy rozpoczęciu gry."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spara dina vanliga lag så kan du återskapa dem med ett tryck när du startar ett spel."
+          }
+        }
+      }
+    },
+    "キャンセル": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -862,23 +1546,47 @@
             "state": "translated",
             "value": "Abbrechen"
           }
-        }
-      }
-    },
-    "ゲスト": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guest"
+            "value": "Cancel"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tühista"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vieras"
+            "value": "Peruuta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        }
+      }
+    },
+    "ゲスト": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -890,23 +1598,47 @@
             "state": "translated",
             "value": "Gast"
           }
-        }
-      }
-    },
-    "ゲスト%lld": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Guest %lld"
+            "value": "Guest"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Külaline"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vieras %lld"
+            "value": "Vieras"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ospite"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gość"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gäst"
+          }
+        }
+      }
+    },
+    "ゲスト%lld": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -918,23 +1650,47 @@
             "state": "translated",
             "value": "Gast %lld"
           }
-        }
-      }
-    },
-    "ゲスト参加者を追加": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add guest player"
+            "value": "Guest %lld"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Külaline %lld"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää vieraspelaaja"
+            "value": "Vieras %lld"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ospite %lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gość %lld"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gäst %lld"
+          }
+        }
+      }
+    },
+    "ゲスト参加者を追加": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -946,23 +1702,47 @@
             "state": "translated",
             "value": "Gastspieler hinzufügen"
           }
-        }
-      }
-    },
-    "ゲームを中断しますか？": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit this game?"
+            "value": "Add guest player"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa külalismängija"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lopetetaanko peli?"
+            "value": "Lisää vieraspelaaja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi giocatore ospite"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj gracza-gościa"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till gästspelare"
+          }
+        }
+      }
+    },
+    "ゲームを中断しますか？": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -974,23 +1754,47 @@
             "state": "translated",
             "value": "Spiel beenden?"
           }
-        }
-      }
-    },
-    "ゲームを完了するとここに表示されます。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Finished games will appear here."
+            "value": "Quit this game?"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Katkestada mäng?"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päättyneet pelit näkyvät täällä."
+            "value": "Lopetetaanko peli?"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbandonare la partita?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończyć grę?"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avsluta spelet?"
+          }
+        }
+      }
+    },
+    "ゲームを完了するとここに表示されます。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1002,23 +1806,47 @@
             "state": "translated",
             "value": "Abgeschlossene Spiele erscheinen hier."
           }
-        }
-      }
-    },
-    "ショート": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Short"
+            "value": "Finished games will appear here."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lõpetatud mängud kuvatakse siin."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lyhyt"
+            "value": "Päättyneet pelit näkyvät täällä."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le partite concluse appariranno qui."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończone gry pojawią się tutaj."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slutförda spel visas här."
+          }
+        }
+      }
+    },
+    "ショート": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1030,23 +1858,47 @@
             "state": "translated",
             "value": "Kurz"
           }
-        }
-      }
-    },
-    "スコア0リセット": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset score to 0"
+            "value": "Short"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lühike"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nollaa pisteet"
+            "value": "Lyhyt"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Corta"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Krótka"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kort"
+          }
+        }
+      }
+    },
+    "スコア0リセット": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1058,23 +1910,47 @@
             "state": "translated",
             "value": "Punkte auf 0"
           }
-        }
-      }
-    },
-    "スコアを0に戻して継続": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset score to 0 and continue"
+            "value": "Reset score to 0"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lähtesta tulemus nulli"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nollaa pisteet ja jatka"
+            "value": "Nollaa pisteet"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Azzera il punteggio"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset wyniku do 0"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nollställ poäng"
+          }
+        }
+      }
+    },
+    "スコアを0に戻して継続": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1086,23 +1962,47 @@
             "state": "translated",
             "value": "Punkte auf 0 zurücksetzen und weiterspielen"
           }
-        }
-      }
-    },
-    "セットアップ": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Setup"
+            "value": "Reset score to 0 and continue"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lähtesta tulemus nulli ja jätka"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Asetus"
+            "value": "Nollaa pisteet ja jatka"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Azzera il punteggio e continua"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyzeruj wynik i kontynuuj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nollställ poängen och fortsätt"
+          }
+        }
+      }
+    },
+    "セットアップ": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1114,24 +2014,48 @@
             "state": "translated",
             "value": "Einrichtung"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Setup"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seadistus"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asetus"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Configurazione"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konfiguracja"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inställning"
+          }
         }
       }
     },
     "チケット": {
       "extractionState": "stale",
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ticket"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lippu"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1143,23 +2067,47 @@
             "state": "translated",
             "value": "Ticket"
           }
-        }
-      }
-    },
-    "チーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Teams"
+            "value": "Ticket"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pilet"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joukkueet"
+            "value": "Lippu"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Biglietto"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bilet"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Biljett"
+          }
+        }
+      }
+    },
+    "チーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1171,23 +2119,47 @@
             "state": "translated",
             "value": "Teams"
           }
-        }
-      }
-    },
-    "チームで合算": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Combined team scoring"
+            "value": "Teams"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiimid"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joukkueen yhteispisteet"
+            "value": "Joukkueet"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squadre"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drużyny"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lag"
+          }
+        }
+      }
+    },
+    "チームで合算": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1199,23 +2171,47 @@
             "state": "translated",
             "value": "Gemeinsame Teampunkte"
           }
-        }
-      }
-    },
-    "チームの登録が削除されます。所属メンバーは削除されません。対戦履歴は残ります。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This team will be removed. Member registrations and past game records will remain."
+            "value": "Combined team scoring"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiimi koondtulemus"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tämä joukkue poistetaan. Pelaajat ja pelihistoria säilyvät."
+            "value": "Joukkueen yhteispisteet"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punteggio combinato di squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Łączna punktacja drużyny"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sammanlagd lagpoäng"
+          }
+        }
+      }
+    },
+    "チームの登録が削除されます。所属メンバーは削除されません。対戦履歴は残ります。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1227,23 +2223,47 @@
             "state": "translated",
             "value": "Dieses Team wird entfernt. Spieler und Spielverlauf bleiben erhalten."
           }
-        }
-      }
-    },
-    "チームの編集": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Edit team"
+            "value": "This team will be removed. Member registrations and past game records will remain."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiim eemaldatakse. Liikmed ja varasemad mängud jäävad alles."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Muokkaa joukkuetta"
+            "value": "Tämä joukkue poistetaan. Pelaajat ja pelihistoria säilyvät."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La squadra verrà rimossa. I membri e i risultati passati rimarranno."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drużyna zostanie usunięta. Członkowie i historia gier pozostaną."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Laget tas bort. Medlemmar och tidigare spelresultat finns kvar."
+          }
+        }
+      }
+    },
+    "チームの編集": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1255,23 +2275,47 @@
             "state": "translated",
             "value": "Team bearbeiten"
           }
-        }
-      }
-    },
-    "チームを登録": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Register team"
+            "value": "Edit team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Muuda tiimi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna joukkue"
+            "value": "Muokkaa joukkuetta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifica squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edytuj drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redigera lag"
+          }
+        }
+      }
+    },
+    "チームを登録": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1283,23 +2327,47 @@
             "state": "translated",
             "value": "Team speichern"
           }
-        }
-      }
-    },
-    "チームを追加": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add team"
+            "value": "Register team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registreeri tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää joukkue"
+            "value": "Tallenna joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zarejestruj drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrera lag"
+          }
+        }
+      }
+    },
+    "チームを追加": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1311,15 +2379,17 @@
             "state": "translated",
             "value": "Team hinzufügen"
           }
-        }
-      }
-    },
-    "チームを追加してください": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Please add a team"
+            "value": "Add team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa tiim"
           }
         },
         "fi": {
@@ -1328,6 +2398,28 @@
             "value": "Lisää joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till lag"
+          }
+        }
+      }
+    },
+    "チームを追加してください": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1339,23 +2431,47 @@
             "state": "translated",
             "value": "Team hinzufügen"
           }
-        }
-      }
-    },
-    "チーム名": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Team name"
+            "value": "Please add a team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palun lisa tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joukkueen nimi"
+            "value": "Lisää joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi una squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till ett lag"
+          }
+        }
+      }
+    },
+    "チーム名": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1367,23 +2483,47 @@
             "state": "translated",
             "value": "Teamname"
           }
-        }
-      }
-    },
-    "チーム戦": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Team game"
+            "value": "Team name"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiimi nimi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joukkuepeli"
+            "value": "Joukkueen nimi"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nazwa drużyny"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagnamn"
+          }
+        }
+      }
+    },
+    "チーム戦": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1395,23 +2535,47 @@
             "state": "translated",
             "value": "Teamspiel"
           }
-        }
-      }
-    },
-    "ペナルティなし": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No penalty"
+            "value": "Team game"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiimimäng"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei rangaistusta"
+            "value": "Joukkuepeli"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squadre"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drużynowa"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagspel"
+          }
+        }
+      }
+    },
+    "ペナルティなし": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1423,23 +2587,47 @@
             "state": "translated",
             "value": "Keine Strafe"
           }
-        }
-      }
-    },
-    "ホーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Home"
+            "value": "No penalty"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Karistuseta"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Etusivu"
+            "value": "Ei rangaistusta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna penalità"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez kary"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inget straff"
+          }
+        }
+      }
+    },
+    "ホーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1451,23 +2639,47 @@
             "state": "translated",
             "value": "Start"
           }
-        }
-      }
-    },
-    "ミス": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Miss"
+            "value": "Home"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avaleht"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Huti"
+            "value": "Etusivu"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Główna"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hem"
+          }
+        }
+      }
+    },
+    "ミス": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1479,23 +2691,47 @@
             "state": "translated",
             "value": "Fehlwurf"
           }
-        }
-      }
-    },
-    "ミス、0点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Miss, 0 pts"
+            "value": "Miss"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Möödavise"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Huti, 0 pistettä"
+            "value": "Huti"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Errore"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pudło"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Miss"
+          }
+        }
+      }
+    },
+    "ミス、0点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1507,23 +2743,47 @@
             "state": "translated",
             "value": "Fehlwurf, 0 Punkte"
           }
-        }
-      }
-    },
-    "メンバー": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Players"
+            "value": "Miss, 0 pts"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Möödavise, 0 p"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pelaajat"
+            "value": "Huti, 0 pistettä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Errore, 0 pt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pudło, 0 pkt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Miss, 0 p"
+          }
+        }
+      }
+    },
+    "メンバー": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1535,23 +2795,47 @@
             "state": "translated",
             "value": "Spieler"
           }
-        }
-      }
-    },
-    "メンバーなしでも開始できます": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "You can start without players"
+            "value": "Players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mängijad"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voit aloittaa ilman pelaajia"
+            "value": "Pelaajat"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giocatori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gracze"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spelare"
+          }
+        }
+      }
+    },
+    "メンバーなしでも開始できます": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1563,23 +2847,47 @@
             "state": "translated",
             "value": "Du kannst auch ohne Spieler starten"
           }
-        }
-      }
-    },
-    "メンバーなしでも開始できます（相手チーム扱い）": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "You can start without players (treated as opponents)"
+            "value": "You can start without players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saad alustada ka ilma mängijateta"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voit aloittaa ilman pelaajia (käsitellään vastustajana)"
+            "value": "Voit aloittaa ilman pelaajia"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puoi iniziare senza giocatori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Możesz zacząć bez graczy"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du kan börja utan spelare"
+          }
+        }
+      }
+    },
+    "メンバーなしでも開始できます（相手チーム扱い）": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1591,23 +2899,47 @@
             "state": "translated",
             "value": "Du kannst auch ohne Spieler starten (gilt als Gegnerteam)"
           }
-        }
-      }
-    },
-    "メンバーを登録": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Register players"
+            "value": "You can start without players (treated as opponents)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saad alustada ka ilma mängijateta (käsitletakse vastasena)"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna pelaajat"
+            "value": "Voit aloittaa ilman pelaajia (käsitellään vastustajana)"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puoi iniziare senza giocatori (trattati come avversari)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Możesz zacząć bez graczy (traktowani jako przeciwnicy)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Du kan börja utan spelare (behandlas som motståndare)"
+          }
+        }
+      }
+    },
+    "メンバーを登録": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1619,23 +2951,47 @@
             "state": "translated",
             "value": "Spieler speichern"
           }
-        }
-      }
-    },
-    "メンバーを登録してください": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Please register a player"
+            "value": "Register players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registreeri mängijad"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää pelaaja"
+            "value": "Tallenna pelaajat"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra giocatori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zarejestruj graczy"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrera spelare"
+          }
+        }
+      }
+    },
+    "メンバーを登録してください": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1647,23 +3003,47 @@
             "state": "translated",
             "value": "Spieler hinzufügen"
           }
-        }
-      }
-    },
-    "メンバーを登録するか、新規ゲームから始めて記録を残せます。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Register players or start a new game to track your records."
+            "value": "Please register a player"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palun registreeri mängija"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna pelaajia tai aloita uusi peli tallentaaksesi tuloksia."
+            "value": "Lisää pelaaja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra un giocatore"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zarejestruj gracza"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrera en spelare"
+          }
+        }
+      }
+    },
+    "メンバーを登録するか、新規ゲームから始めて記録を残せます。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1675,23 +3055,47 @@
             "state": "translated",
             "value": "Speichere Spieler oder starte ein neues Spiel, um Ergebnisse festzuhalten."
           }
-        }
-      }
-    },
-    "メンバーを追加": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add player"
+            "value": "Register players or start a new game to track your records."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registreeri mängijad või alusta uut mängu, et oma tulemusi jälgida."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää pelaaja"
+            "value": "Tallenna pelaajia tai aloita uusi peli tallentaaksesi tuloksia."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra i giocatori o inizia una nuova partita per tracciare i tuoi risultati."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zarejestruj graczy lub rozpocznij nową grę, aby śledzić wyniki."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrera spelare eller starta ett nytt spel för att spåra dina resultat."
+          }
+        }
+      }
+    },
+    "メンバーを追加": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1703,23 +3107,47 @@
             "state": "translated",
             "value": "Spieler hinzufügen"
           }
-        }
-      }
-    },
-    "メンバー未割当": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No players assigned"
+            "value": "Add player"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa mängija"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei pelaajia"
+            "value": "Lisää pelaaja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi giocatore"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj gracza"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till spelare"
+          }
+        }
+      }
+    },
+    "メンバー未割当": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1731,23 +3159,47 @@
             "state": "translated",
             "value": "Keine Spieler zugewiesen"
           }
-        }
-      }
-    },
-    "モルックの公式ルールに沿ったスコアアプリ。屋外でも見やすい大きな数字表示と、メンバー登録による戦績管理が特長です。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A Mölkky scoring app that follows the official rules. Features large, outdoor-friendly score displays and player-based record tracking."
+            "value": "No players assigned"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mängijaid pole määratud"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Virallisten Mölkky-sääntöjen mukainen pisteytyssovellus. Selkeät, ulkokäyttöön sopivat numerot ja pelaajakohtainen tuloshistoria."
+            "value": "Ei pelaajia"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun giocatore assegnato"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak przypisanych graczy"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inga spelare tilldelade"
+          }
+        }
+      }
+    },
+    "モルックの公式ルールに沿ったスコアアプリ。屋外でも見やすい大きな数字表示と、メンバー登録による戦績管理が特長です。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1759,23 +3211,47 @@
             "state": "translated",
             "value": "Eine Mölkky-Punkte-App nach den offiziellen Regeln. Mit großen, auch im Freien gut lesbaren Ziffern und spielerbasierter Ergebnisverwaltung."
           }
-        }
-      }
-    },
-    "モード": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Mode"
+            "value": "A Mölkky scoring app that follows the official rules. Features large, outdoor-friendly score displays and player-based record tracking."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mölkky punktiarvestuse rakendus, mis järgib ametlikke reegleid. Suured, õues hästi loetavad tulemused ja mängijapõhine statistika."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tila"
+            "value": "Virallisten Mölkky-sääntöjen mukainen pisteytyssovellus. Selkeät, ulkokäyttöön sopivat numerot ja pelaajakohtainen tuloshistoria."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un'app per il punteggio di Mölkky conforme alle regole ufficiali. Offre punteggi grandi e leggibili anche all'aperto e il tracciamento dei risultati per giocatore."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aplikacja do liczenia punktów w Mölkky zgodna z oficjalnymi zasadami. Duże, czytelne wyniki widoczne na zewnątrz oraz śledzenie statystyk graczy."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En Mölkky-poängapp som följer de officiella reglerna. Med stora, lättlästa poängvisningar för utomhusbruk och resultatuppföljning baserad på registrerade spelare."
+          }
+        }
+      }
+    },
+    "モード": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1787,23 +3263,47 @@
             "state": "translated",
             "value": "Modus"
           }
-        }
-      }
-    },
-    "ルール": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rules"
+            "value": "Mode"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Režiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Säännöt"
+            "value": "Tila"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modalità"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tryb"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Läge"
+          }
+        }
+      }
+    },
+    "ルール": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1814,6 +3314,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "Regeln"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rules"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reeglid"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Säännöt"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regole"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasady"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regler"
           }
         }
       }
@@ -1838,10 +3374,34 @@
             "value": "Tell us what you think in a review. It really helps us improve the app."
           }
         },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anna arvustuses teada, mida arvad. See aitab meil rakendust paremaks muuta."
+          }
+        },
         "fi": {
           "stringUnit": {
             "state": "translated",
             "value": "Kerro mielipiteesi arvostelussa. Se auttaa meitä kehittämään sovellusta."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dicci cosa ne pensi in una recensione. Ci aiuta davvero a migliorare l'app."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podziel się opinią w recenzji. To naprawdę pomaga nam ulepszać aplikację."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Berätta vad du tycker i en recension. Det hjälper oss att förbättra appen."
           }
         }
       }
@@ -1866,28 +3426,40 @@
             "value": "Write a Review"
           }
         },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kirjuta arvustus"
+          }
+        },
         "fi": {
           "stringUnit": {
             "state": "translated",
             "value": "Kirjoita arvostelu"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scrivi una recensione"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Napisz recenzję"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skriv en recension"
           }
         }
       }
     },
     "ロング": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Long"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pitkä"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1899,23 +3471,47 @@
             "state": "translated",
             "value": "Lang"
           }
-        }
-      }
-    },
-    "中断": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit"
+            "value": "Long"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pikk"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lopeta"
+            "value": "Pitkä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lunga"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Długa"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lång"
+          }
+        }
+      }
+    },
+    "中断": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1927,23 +3523,47 @@
             "state": "translated",
             "value": "Beenden"
           }
-        }
-      }
-    },
-    "中断（保存しない）": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quit (don't save)"
+            "value": "Quit"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Katkesta"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lopeta (älä tallenna)"
+            "value": "Lopeta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbandona"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończ"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avsluta"
+          }
+        }
+      }
+    },
+    "中断（保存しない）": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1955,24 +3575,48 @@
             "state": "translated",
             "value": "Beenden (nicht speichern)"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit (don't save)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Katkesta (ära salvesta)"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lopeta (älä tallenna)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abbandona (non salvare)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończ (bez zapisu)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avsluta (spara inte)"
+          }
         }
       }
     },
     "人": {
       "extractionState": "stale",
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "players"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "pelaajaa"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -1984,23 +3628,47 @@
             "state": "translated",
             "value": "Spieler"
           }
-        }
-      }
-    },
-    "保存しました": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Saved"
+            "value": "players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "mängijat"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallennettu"
+            "value": "pelaajaa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "giocatori"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "graczy"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "spelare"
+          }
+        }
+      }
+    },
+    "保存しました": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2012,23 +3680,47 @@
             "state": "translated",
             "value": "Gespeichert"
           }
-        }
-      }
-    },
-    "保存済みチームから": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "From saved teams"
+            "value": "Saved"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvestatud"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallennetuista joukkueista"
+            "value": "Tallennettu"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvato"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisano"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparat"
+          }
+        }
+      }
+    },
+    "保存済みチームから": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2040,23 +3732,47 @@
             "state": "translated",
             "value": "Aus gespeicherten Teams"
           }
-        }
-      }
-    },
-    "保存済みチームを更新": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Update saved team"
+            "value": "From saved teams"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salvestatud tiimidest"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päivitä tallennettu joukkue"
+            "value": "Tallennetuista joukkueista"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dalle squadre salvate"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z zapisanych drużyn"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Från sparade lag"
+          }
+        }
+      }
+    },
+    "保存済みチームを更新": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2068,23 +3784,47 @@
             "state": "translated",
             "value": "Gespeichertes Team aktualisieren"
           }
-        }
-      }
-    },
-    "個人戦": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Singles"
+            "value": "Update saved team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uuenda salvestatud tiimi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Yksinpeli"
+            "value": "Päivitä tallennettu joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiorna squadra salvata"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaktualizuj zapisaną drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uppdatera sparat lag"
+          }
+        }
+      }
+    },
+    "個人戦": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2096,23 +3836,47 @@
             "state": "translated",
             "value": "Einzelspiel"
           }
-        }
-      }
-    },
-    "優勝": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Champion"
+            "value": "Singles"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Üksikmäng"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voitto"
+            "value": "Yksinpeli"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Singolo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Singel"
+          }
+        }
+      }
+    },
+    "優勝": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2124,23 +3888,47 @@
             "state": "translated",
             "value": "Sieg"
           }
-        }
-      }
-    },
-    "元に戻す": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Undo"
+            "value": "Champion"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Võitja"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kumoa"
+            "value": "Voitto"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Campione"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zwycięzca"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mästare"
+          }
+        }
+      }
+    },
+    "元に戻す": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2152,23 +3940,47 @@
             "state": "translated",
             "value": "Rückgängig"
           }
-        }
-      }
-    },
-    "再戦": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rematch"
+            "value": "Undo"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Võta tagasi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uusinta"
+            "value": "Kumoa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cofnij"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ångra"
+          }
+        }
+      }
+    },
+    "再戦": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2180,23 +3992,47 @@
             "state": "translated",
             "value": "Revanche"
           }
-        }
-      }
-    },
-    "削除": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Delete"
+            "value": "Rematch"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kordusmäng"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poista"
+            "value": "Uusinta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rivincita"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rewanż"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Returmatch"
+          }
+        }
+      }
+    },
+    "削除": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2208,23 +4044,47 @@
             "state": "translated",
             "value": "Löschen"
           }
-        }
-      }
-    },
-    "前回のゲーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Last game"
+            "value": "Delete"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kustuta"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Edellinen peli"
+            "value": "Poista"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elimina"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Radera"
+          }
+        }
+      }
+    },
+    "前回のゲーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2236,23 +4096,47 @@
             "state": "translated",
             "value": "Letztes Spiel"
           }
-        }
-      }
-    },
-    "勝者": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Winner"
+            "value": "Last game"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Viimane mäng"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voittaja"
+            "value": "Edellinen peli"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ultima partita"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ostatnia gra"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senaste spelet"
+          }
+        }
+      }
+    },
+    "勝者": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2264,23 +4148,47 @@
             "state": "translated",
             "value": "Sieger"
           }
-        }
-      }
-    },
-    "勝者 %@": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Winner %@"
+            "value": "Winner"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Võitja"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Voittaja %@"
+            "value": "Voittaja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vincitore"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zwycięzca"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vinnare"
+          }
+        }
+      }
+    },
+    "勝者 %@": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2292,23 +4200,47 @@
             "state": "translated",
             "value": "Sieger %@"
           }
-        }
-      }
-    },
-    "参加チーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Participating teams"
+            "value": "Winner %@"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Võitja %@"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Osallistuvat joukkueet"
+            "value": "Voittaja %@"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vincitore %@"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zwycięzca %@"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vinnare %@"
+          }
+        }
+      }
+    },
+    "参加チーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2320,23 +4252,47 @@
             "state": "translated",
             "value": "Teilnehmende Teams"
           }
-        }
-      }
-    },
-    "参加メンバー": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Participating players"
+            "value": "Participating teams"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Osalevad tiimid"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Osallistuvat pelaajat"
+            "value": "Osallistuvat joukkueet"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squadre partecipanti"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uczestniczące drużyny"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deltagande lag"
+          }
+        }
+      }
+    },
+    "参加メンバー": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2348,23 +4304,47 @@
             "state": "translated",
             "value": "Teilnehmende Spieler"
           }
-        }
-      }
-    },
-    "参加候補": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Available players"
+            "value": "Participating players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Osalevad mängijad"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Valittavissa"
+            "value": "Osallistuvat pelaajat"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giocatori partecipanti"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uczestniczący gracze"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deltagande spelare"
+          }
+        }
+      }
+    },
+    "参加候補": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2376,23 +4356,47 @@
             "state": "translated",
             "value": "Verfügbar"
           }
-        }
-      }
-    },
-    "取消": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cancel"
+            "value": "Available players"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saadaolevad mängijad"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kumoa"
+            "value": "Valittavissa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Giocatori disponibili"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostępni gracze"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tillgängliga spelare"
+          }
+        }
+      }
+    },
+    "取消": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2404,23 +4408,47 @@
             "state": "translated",
             "value": "Rückgängig"
           }
-        }
-      }
-    },
-    "同チームで再戦": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Rematch with the same teams"
+            "value": "Cancel"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tühista"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uusinta samoilla joukkueilla"
+            "value": "Kumoa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulla"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avbryt"
+          }
+        }
+      }
+    },
+    "同チームで再戦": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2432,23 +4460,47 @@
             "state": "translated",
             "value": "Revanche mit denselben Teams"
           }
-        }
-      }
-    },
-    "名前": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Name"
+            "value": "Rematch with the same teams"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kordusmäng samade tiimidega"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nimi"
+            "value": "Uusinta samoilla joukkueilla"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rivincita con le stesse squadre"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rewanż z tymi samymi drużynami"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Returmatch med samma lag"
+          }
+        }
+      }
+    },
+    "名前": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2460,23 +4512,47 @@
             "state": "translated",
             "value": "Name"
           }
-        }
-      }
-    },
-    "名前は後から入力可（空欄でも開始可）": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Names can be entered later (you can start with blanks)"
+            "value": "Name"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nimi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nimet voi syöttää myöhemmin (voit aloittaa tyhjinä)"
+            "value": "Nimi"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nome"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imię"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Namn"
+          }
+        }
+      }
+    },
+    "名前は後から入力可（空欄でも開始可）": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2488,23 +4564,47 @@
             "state": "translated",
             "value": "Namen kannst du später eintragen (Start auch leer möglich)"
           }
-        }
-      }
-    },
-    "団体戦": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Team game"
+            "value": "Names can be entered later (you can start with blanks)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nimesid saab hiljem sisestada (võid alustada tühjadega)"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Joukkuepeli"
+            "value": "Nimet voi syöttää myöhemmin (voit aloittaa tyhjinä)"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I nomi possono essere inseriti dopo (puoi iniziare con campi vuoti)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imiona można wpisać później (można zacząć z pustymi polami)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Namn kan anges senare (du kan börja med tomma fält)"
+          }
+        }
+      }
+    },
+    "団体戦": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2516,23 +4616,47 @@
             "state": "translated",
             "value": "Teamspiel"
           }
-        }
-      }
-    },
-    "失格": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Disqualified"
+            "value": "Team game"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiimimäng"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pudonnut"
+            "value": "Joukkuepeli"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partita a squadre"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gra drużynowa"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lagspel"
+          }
+        }
+      }
+    },
+    "失格": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2544,23 +4668,47 @@
             "state": "translated",
             "value": "Ausgeschieden"
           }
-        }
-      }
-    },
-    "完了": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Done"
+            "value": "Disqualified"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diskvalifitseeritud"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Valmis"
+            "value": "Pudonnut"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squalificato"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zdyskwalifikowany"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diskvalificerad"
+          }
+        }
+      }
+    },
+    "完了": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2572,23 +4720,47 @@
             "state": "translated",
             "value": "Fertig"
           }
-        }
-      }
-    },
-    "対戦中": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "In progress"
+            "value": "Done"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valmis"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Käynnissä"
+            "value": "Valmis"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fatto"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gotowe"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klar"
+          }
+        }
+      }
+    },
+    "対戦中": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2600,23 +4772,47 @@
             "state": "translated",
             "value": "Läuft"
           }
-        }
-      }
-    },
-    "対戦履歴": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Game history"
+            "value": "In progress"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pooleli"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pelihistoria"
+            "value": "Käynnissä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In corso"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W toku"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pågår"
+          }
+        }
+      }
+    },
+    "対戦履歴": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2628,23 +4824,47 @@
             "state": "translated",
             "value": "Spielverlauf"
           }
-        }
-      }
-    },
-    "対戦履歴なし": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No game history"
+            "value": "Game history"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mänguajalugu"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei pelihistoriaa"
+            "value": "Pelihistoria"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cronologia partite"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historia gier"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spelhistorik"
+          }
+        }
+      }
+    },
+    "対戦履歴なし": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2656,23 +4876,47 @@
             "state": "translated",
             "value": "Kein Spielverlauf"
           }
-        }
-      }
-    },
-    "履歴": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "History"
+            "value": "No game history"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mänguajalugu puudub"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Historia"
+            "value": "Ei pelihistoriaa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna cronologia partite"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak historii gier"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen spelhistorik"
+          }
+        }
+      }
+    },
+    "履歴": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2684,23 +4928,47 @@
             "state": "translated",
             "value": "Verlauf"
           }
-        }
-      }
-    },
-    "履歴はまだありません": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No history yet"
+            "value": "History"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajalugu"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei vielä historiaa"
+            "value": "Historia"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cronologia"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historia"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historik"
+          }
+        }
+      }
+    },
+    "履歴はまだありません": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2712,23 +4980,47 @@
             "state": "translated",
             "value": "Noch kein Verlauf"
           }
-        }
-      }
-    },
-    "左から試合を選択": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select a game from the left"
+            "value": "No history yet"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajalugu veel pole"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Valitse peli vasemmalta"
+            "value": "Ei vielä historiaa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna cronologia ancora"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak historii"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingen historik ännu"
+          }
+        }
+      }
+    },
+    "左から試合を選択": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2740,23 +5032,47 @@
             "state": "translated",
             "value": "Spiel links auswählen"
           }
-        }
-      }
-    },
-    "左から選択": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select from the left"
+            "value": "Select a game from the left"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vali mäng vasakult"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Valitse vasemmalta"
+            "value": "Valitse peli vasemmalta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seleziona una partita da sinistra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz grę z lewej"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Välj ett spel från vänster"
+          }
+        }
+      }
+    },
+    "左から選択": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2768,23 +5084,47 @@
             "state": "translated",
             "value": "Links auswählen"
           }
-        }
-      }
-    },
-    "復帰": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Resume"
+            "value": "Select from the left"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vali vasakult"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Palauta"
+            "value": "Valitse vasemmalta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seleziona da sinistra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz z lewej"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Välj från vänster"
+          }
+        }
+      }
+    },
+    "復帰": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2796,23 +5136,47 @@
             "state": "translated",
             "value": "Zurück"
           }
-        }
-      }
-    },
-    "所属メンバー": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Members"
+            "value": "Resume"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jätka"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Pelaajat"
+            "value": "Palauta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Riprendi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wznów"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Återuppta"
+          }
+        }
+      }
+    },
+    "所属メンバー": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2824,23 +5188,47 @@
             "state": "translated",
             "value": "Mitglieder"
           }
-        }
-      }
-    },
-    "手番 %@、スコア %lld": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Turn %@, score %lld"
+            "value": "Members"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liikmed"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Vuoro %@, pisteet %lld"
+            "value": "Pelaajat"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Membri"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Członkowie"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medlemmar"
+          }
+        }
+      }
+    },
+    "手番 %@、スコア %lld": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2852,23 +5240,47 @@
             "state": "translated",
             "value": "Am Zug %@, Punkte %lld"
           }
-        }
-      }
-    },
-    "手番順は対戦開始時に決定します": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Turn order is decided when the game begins"
+            "value": "Turn %@, score %lld"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käik %@, tulemus %lld"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heittojärjestys määritetään pelin alkaessa"
+            "value": "Vuoro %@, pisteet %lld"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turno %@, punteggio %lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tura %@, wynik %lld"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tur %@, poäng %lld"
+          }
+        }
+      }
+    },
+    "手番順は対戦開始時に決定します": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2880,23 +5292,47 @@
             "state": "translated",
             "value": "Die Wurfreihenfolge wird zu Spielbeginn festgelegt"
           }
-        }
-      }
-    },
-    "手番順（長押しで並べ替え）": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Turn order (long-press to reorder)"
+            "value": "Turn order is decided when the game begins"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käigujärjekord määratakse mängu alguses"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heittojärjestys (pitkä painallus järjestää)"
+            "value": "Heittojärjestys määritetään pelin alkaessa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'ordine dei turni viene deciso all'inizio della partita"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolejność tur ustalana jest na początku gry"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turordningen bestäms när spelet börjar"
+          }
+        }
+      }
+    },
+    "手番順（長押しで並べ替え）": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2908,23 +5344,47 @@
             "state": "translated",
             "value": "Wurfreihenfolge (lang drücken zum Sortieren)"
           }
-        }
-      }
-    },
-    "投擲ログ": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Throw log"
+            "value": "Turn order (long-press to reorder)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käigujärjekord (järjestamiseks hoia all)"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heittoloki"
+            "value": "Heittojärjestys (pitkä painallus järjestää)"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordine dei turni (tieni premuto per riordinare)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolejność tur (przytrzymaj, aby zmienić)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turordning (håll in för att ändra ordning)"
+          }
+        }
+      }
+    },
+    "投擲ログ": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2936,23 +5396,47 @@
             "state": "translated",
             "value": "Wurfprotokoll"
           }
-        }
-      }
-    },
-    "投擲履歴": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Throw history"
+            "value": "Throw log"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visete logi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heittohistoria"
+            "value": "Heittoloki"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registro lanci"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dziennik rzutów"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kastlogg"
+          }
+        }
+      }
+    },
+    "投擲履歴": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2964,23 +5448,47 @@
             "state": "translated",
             "value": "Wurfverlauf"
           }
-        }
-      }
-    },
-    "投擲順は対戦中にローテーションされます": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Throw order rotates during the game"
+            "value": "Throw history"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visete ajalugu"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heittojärjestys vaihtuu pelin aikana"
+            "value": "Heittohistoria"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cronologia lanci"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historia rzutów"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kasthistorik"
+          }
+        }
+      }
+    },
+    "投擲順は対戦中にローテーションされます": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -2992,23 +5500,47 @@
             "state": "translated",
             "value": "Die Wurfreihenfolge rotiert während des Spiels"
           }
-        }
-      }
-    },
-    "投擲順（長押しで並べ替え）": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Throw order (long-press to reorder)"
+            "value": "Throw order rotates during the game"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Viskejärjekord vaheldub mängu jooksul"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Heittojärjestys (pitkä painallus järjestää)"
+            "value": "Heittojärjestys vaihtuu pelin aikana"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'ordine di lancio ruota durante la partita"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolejność rzutów zmienia się w trakcie gry"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kastordningen roterar under spelet"
+          }
+        }
+      }
+    },
+    "投擲順（長押しで並べ替え）": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3020,23 +5552,47 @@
             "state": "translated",
             "value": "Wurfreihenfolge (lang drücken zum Sortieren)"
           }
-        }
-      }
-    },
-    "新しいチームを作る": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Create a new team"
+            "value": "Throw order (long-press to reorder)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Viskejärjekord (järjestamiseks hoia all)"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Luo uusi joukkue"
+            "value": "Heittojärjestys (pitkä painallus järjestää)"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordine di lancio (tieni premuto per riordinare)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kolejność rzutów (przytrzymaj, aby zmienić)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kastordning (håll in för att ändra ordning)"
+          }
+        }
+      }
+    },
+    "新しいチームを作る": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3048,23 +5604,47 @@
             "state": "translated",
             "value": "Neues Team erstellen"
           }
-        }
-      }
-    },
-    "新しいメンバーを追加": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add a new player"
+            "value": "Create a new team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loo uus tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää uusi pelaaja"
+            "value": "Luo uusi joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crea una nuova squadra"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwórz nową drużynę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skapa ett nytt lag"
+          }
+        }
+      }
+    },
+    "新しいメンバーを追加": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3076,23 +5656,47 @@
             "state": "translated",
             "value": "Neuen Spieler hinzufügen"
           }
-        }
-      }
-    },
-    "新規": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "New"
+            "value": "Add a new player"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa uus mängija"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Uusi"
+            "value": "Lisää uusi pelaaja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi un nuovo giocatore"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj nowego gracza"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till en ny spelare"
+          }
+        }
+      }
+    },
+    "新規": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3104,23 +5708,47 @@
             "state": "translated",
             "value": "Neu"
           }
-        }
-      }
-    },
-    "既定のルール": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Default rules"
+            "value": "New"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uus"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Oletussäännöt"
+            "value": "Uusi"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nuovo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nowa"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ny"
+          }
+        }
+      }
+    },
+    "既定のルール": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3132,23 +5760,47 @@
             "state": "translated",
             "value": "Standardregeln"
           }
-        }
-      }
-    },
-    "日時": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Date"
+            "value": "Default rules"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaikereeglid"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ajankohta"
+            "value": "Oletussäännöt"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regole predefinite"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domyślne zasady"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standardregler"
+          }
+        }
+      }
+    },
+    "日時": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3160,23 +5812,47 @@
             "state": "translated",
             "value": "Datum"
           }
-        }
-      }
-    },
-    "最初のゲームを始めましょう": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Let's start your first game"
+            "value": "Date"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kuupäev"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aloitetaan ensimmäinen peli"
+            "value": "Ajankohta"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datum"
+          }
+        }
+      }
+    },
+    "最初のゲームを始めましょう": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3188,23 +5864,47 @@
             "state": "translated",
             "value": "Starten wir das erste Spiel"
           }
-        }
-      }
-    },
-    "最終順位": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Final ranking"
+            "value": "Let's start your first game"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alustame sinu esimest mängu"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lopullinen sijoitus"
+            "value": "Aloitetaan ensimmäinen peli"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniziamo la tua prima partita"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zacznijmy twoją pierwszą grę"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Låt oss starta ditt första spel"
+          }
+        }
+      }
+    },
+    "最終順位": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3216,23 +5916,47 @@
             "state": "translated",
             "value": "Endplatzierung"
           }
-        }
-      }
-    },
-    "最高得点のプレイヤー/チームが勝者として記録されます。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The player/team with the highest score will be recorded as the winner."
+            "value": "Final ranking"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lõpptulemus"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eniten pisteitä saanut pelaaja tai joukkue tallennetaan voittajaksi."
+            "value": "Lopullinen sijoitus"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classifica finale"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Końcowa klasyfikacja"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slutställning"
+          }
+        }
+      }
+    },
+    "最高得点のプレイヤー/チームが勝者として記録されます。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3244,23 +5968,47 @@
             "state": "translated",
             "value": "Der Spieler oder das Team mit der höchsten Punktzahl wird als Sieger eingetragen."
           }
-        }
-      }
-    },
-    "未命名チーム": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unnamed team"
+            "value": "The player/team with the highest score will be recorded as the winner."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Võitjaks märgitakse kõrgeima tulemusega mängija/tiim."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nimetön joukkue"
+            "value": "Eniten pisteitä saanut pelaaja tai joukkue tallennetaan voittajaksi."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il giocatore/squadra con il punteggio più alto verrà registrato come vincitore."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gracz/drużyna z najwyższym wynikiem zostanie zapisany jako zwycięzca."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spelaren/laget med högst poäng registreras som vinnare."
+          }
+        }
+      }
+    },
+    "未命名チーム": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3272,23 +6020,47 @@
             "state": "translated",
             "value": "Unbenanntes Team"
           }
-        }
-      }
-    },
-    "未完了": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unfinished"
+            "value": "Unnamed team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nimetu tiim"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kesken"
+            "value": "Nimetön joukkue"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Squadra senza nome"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drużyna bez nazwy"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Namnlöst lag"
+          }
+        }
+      }
+    },
+    "未完了": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3300,23 +6072,47 @@
             "state": "translated",
             "value": "Unvollständig"
           }
-        }
-      }
-    },
-    "未登録": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Unregistered"
+            "value": "Unfinished"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lõpetamata"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei tallennettu"
+            "value": "Kesken"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incompiuta"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niezakończona"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ej slutfört"
+          }
+        }
+      }
+    },
+    "未登録": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3327,6 +6123,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "Nicht gespeichert"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unregistered"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registreerimata"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ei tallennettu"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non registrato"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niezarejestrowany"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ej registrerad"
           }
         }
       }
@@ -3351,28 +6183,40 @@
             "value": "Enjoying the game?"
           }
         },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kas mäng meeldib sulle?"
+          }
+        },
         "fi": {
           "stringUnit": {
             "state": "translated",
             "value": "Pidätkö pelistä?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ti stai divertendo?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dobrze się bawisz?"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trivs du med spelet?"
           }
         }
       }
     },
     "標準": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Standard"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vakio"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3384,23 +6228,47 @@
             "state": "translated",
             "value": "Standard"
           }
-        }
-      }
-    },
-    "欠席": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Absent"
+            "value": "Standard"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tavaline"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Poissa"
+            "value": "Vakio"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
+          }
+        }
+      }
+    },
+    "欠席": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3412,23 +6280,47 @@
             "state": "translated",
             "value": "Abwesend"
           }
-        }
-      }
-    },
-    "点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "pts"
+            "value": "Absent"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puudub"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "pistettä"
+            "value": "Poissa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Assente"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieobecny"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frånvarande"
+          }
+        }
+      }
+    },
+    "点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3440,23 +6332,47 @@
             "state": "translated",
             "value": "Punkte"
           }
-        }
-      }
-    },
-    "現在のスコアで結果にしますか？": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Finish with the current scores?"
+            "value": "pts"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "p"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Päätetäänkö peli nykyisillä pisteillä?"
+            "value": "pistettä"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pt"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pkt"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "p"
+          }
+        }
+      }
+    },
+    "現在のスコアで結果にしますか？": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3468,23 +6384,47 @@
             "state": "translated",
             "value": "Spiel mit aktuellem Punktestand beenden?"
           }
-        }
-      }
-    },
-    "登録するとゲームの度に名前入力が不要になります。": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Register players to skip entering names each game."
+            "value": "Finish with the current scores?"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lõpetada praeguste tulemustega?"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tallenna pelaajat, niin sinun ei tarvitse syöttää nimiä joka pelin alussa."
+            "value": "Päätetäänkö peli nykyisillä pisteillä?"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Concludere con i punteggi attuali?"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakończyć z obecnymi wynikami?"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avsluta med nuvarande poäng?"
+          }
+        }
+      }
+    },
+    "登録するとゲームの度に名前入力が不要になります。": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3496,23 +6436,47 @@
             "state": "translated",
             "value": "Speichere Spieler, damit du nicht bei jedem Spiel Namen eingeben musst."
           }
-        }
-      }
-    },
-    "目標点": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Target score"
+            "value": "Register players to skip entering names each game."
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registreeri mängijad, et vältida nimede sisestamist iga mängu jaoks."
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tavoitepisteet"
+            "value": "Tallenna pelaajat, niin sinun ei tarvitse syöttää nimiä joka pelin alussa."
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registra i giocatori per non dover inserire i nomi a ogni partita."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zarejestruj graczy, aby nie wpisywać imion przy każdej grze."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrera spelare för att slippa ange namn varje spel."
+          }
+        }
+      }
+    },
+    "目標点": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3524,23 +6488,47 @@
             "state": "translated",
             "value": "Zielpunkte"
           }
-        }
-      }
-    },
-    "相手チームとして扱われます": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Treated as the opposing team"
+            "value": "Target score"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sihtpunktid"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Käsitellään vastustajajoukkueena"
+            "value": "Tavoitepisteet"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punteggio obiettivo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Punkty docelowe"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Målpoäng"
+          }
+        }
+      }
+    },
+    "相手チームとして扱われます": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3552,23 +6540,47 @@
             "state": "translated",
             "value": "Wird als Gegnerteam behandelt"
           }
-        }
-      }
-    },
-    "結果": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Results"
+            "value": "Treated as the opposing team"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käsitletakse vastastiimina"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tulokset"
+            "value": "Käsitellään vastustajajoukkueena"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trattata come squadra avversaria"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traktowana jako drużyna przeciwna"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Behandlas som motståndarlag"
+          }
+        }
+      }
+    },
+    "結果": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3580,23 +6592,47 @@
             "state": "translated",
             "value": "Ergebnisse"
           }
-        }
-      }
-    },
-    "結果へ": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "To results"
+            "value": "Results"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tulemused"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tuloksiin"
+            "value": "Tulokset"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Risultati"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyniki"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultat"
+          }
+        }
+      }
+    },
+    "結果へ": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3608,23 +6644,47 @@
             "state": "translated",
             "value": "Zu den Ergebnissen"
           }
-        }
-      }
-    },
-    "結果へ進む": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Go to results"
+            "value": "To results"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tulemuste juurde"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Siirry tuloksiin"
+            "value": "Tuloksiin"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ai risultati"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Do wyników"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Till resultat"
+          }
+        }
+      }
+    },
+    "結果へ進む": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3636,23 +6696,47 @@
             "state": "translated",
             "value": "Zu den Ergebnissen gehen"
           }
-        }
-      }
-    },
-    "設定": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Settings"
+            "value": "Go to results"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mine tulemuste juurde"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Asetukset"
+            "value": "Siirry tuloksiin"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vai ai risultati"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przejdź do wyników"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gå till resultat"
+          }
+        }
+      }
+    },
+    "設定": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3664,23 +6748,47 @@
             "state": "translated",
             "value": "Einstellungen"
           }
-        }
-      }
-    },
-    "詳細を見る": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "View details"
+            "value": "Settings"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seaded"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Näytä tiedot"
+            "value": "Asetukset"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impostazioni"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inställningar"
+          }
+        }
+      }
+    },
+    "詳細を見る": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3692,23 +6800,47 @@
             "state": "translated",
             "value": "Details anzeigen"
           }
-        }
-      }
-    },
-    "超過時": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "When exceeded"
+            "value": "View details"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vaata üksikasju"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Yli menossa"
+            "value": "Näytä tiedot"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vedi dettagli"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobacz szczegóły"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visa detaljer"
+          }
+        }
+      }
+    },
+    "超過時": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3720,23 +6852,47 @@
             "state": "translated",
             "value": "Bei Überschreitung"
           }
-        }
-      }
-    },
-    "追加": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add"
+            "value": "When exceeded"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ületamisel"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Lisää"
+            "value": "Yli menossa"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In caso di superamento"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po przekroczeniu"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vid överskridning"
+          }
+        }
+      }
+    },
+    "追加": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3747,24 +6903,48 @@
           "stringUnit": {
             "state": "translated",
             "value": "Hinzufügen"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisää"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till"
           }
         }
       }
     },
     "追加する": {
       "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Add"
-          }
-        },
-        "fi": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lisää"
-          }
-        },
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3776,23 +6956,47 @@
             "state": "translated",
             "value": "Hinzufügen"
           }
-        }
-      }
-    },
-    "追加できるメンバーがいません": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No players available to add"
+            "value": "Add"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisa"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ei lisättäviä pelaajia"
+            "value": "Lisää"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiungi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lägg till"
+          }
+        }
+      }
+    },
+    "追加できるメンバーがいません": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3804,23 +7008,47 @@
             "state": "translated",
             "value": "Keine Spieler zum Hinzufügen"
           }
-        }
-      }
-    },
-    "連続ミスしきい値": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Consecutive miss threshold"
+            "value": "No players available to add"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lisatavaid mängijaid pole"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hutiheittojen raja"
+            "value": "Ei lisättäviä pelaajia"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun giocatore da aggiungere"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak graczy do dodania"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inga spelare att lägga till"
+          }
+        }
+      }
+    },
+    "連続ミスしきい値": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3832,23 +7060,47 @@
             "state": "translated",
             "value": "Grenze für Fehlwürfe in Folge"
           }
-        }
-      }
-    },
-    "連続ミスでも何も起きない": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nothing happens on consecutive misses"
+            "value": "Consecutive miss threshold"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Järjestikuste möödavisete lävi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hutiheitoista ei seuraa mitään"
+            "value": "Hutiheittojen raja"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soglia errori consecutivi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Próg kolejnych pudeł"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tröskel för missar i rad"
+          }
+        }
+      }
+    },
+    "連続ミスでも何も起きない": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3860,23 +7112,47 @@
             "state": "translated",
             "value": "Bei Fehlwürfen in Folge passiert nichts"
           }
-        }
-      }
-    },
-    "連続ミス時": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "On consecutive misses"
+            "value": "Nothing happens on consecutive misses"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Järjestikuste möödavisete korral ei juhtu midagi"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hutiheittojen kohdalla"
+            "value": "Hutiheitoista ei seuraa mitään"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nulla accade con errori consecutivi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nic się nie dzieje przy kolejnych pudłach"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inget händer vid missar i rad"
+          }
+        }
+      }
+    },
+    "連続ミス時": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3888,23 +7164,47 @@
             "state": "translated",
             "value": "Bei Fehlwürfen in Folge"
           }
-        }
-      }
-    },
-    "閉じる": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Close"
+            "value": "On consecutive misses"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Järjestikuste möödavisete korral"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sulje"
+            "value": "Hutiheittojen kohdalla"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Con errori consecutivi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przy kolejnych pudłach"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vid missar i rad"
+          }
+        }
+      }
+    },
+    "閉じる": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3916,23 +7216,47 @@
             "state": "translated",
             "value": "Schließen"
           }
-        }
-      }
-    },
-    "（未入力で「相手チーム」扱い）": {
-      "localizations": {
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "(Treated as \"Opponents\" if blank)"
+            "value": "Close"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sulge"
           }
         },
         "fi": {
           "stringUnit": {
             "state": "translated",
-            "value": "(Tyhjänä käsitellään \"Vastustajana\")"
+            "value": "Sulje"
           }
         },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chiudi"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknij"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stäng"
+          }
+        }
+      }
+    },
+    "（未入力で「相手チーム」扱い）": {
+      "localizations": {
         "cs": {
           "stringUnit": {
             "state": "translated",
@@ -3943,6 +7267,42 @@
           "stringUnit": {
             "state": "translated",
             "value": "(Leer wird als „Gegnerteam“ behandelt)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Treated as \"Opponents\" if blank)"
+          }
+        },
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Tühjana käsitletakse kui \"Vastased\")"
+          }
+        },
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Tyhjänä käsitellään \"Vastustajana\")"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Trattata come \"Avversari\" se vuoto)"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Puste pole traktowane jako „Przeciwnicy”)"
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(Behandlas som \"Motståndare\" om tomt)"
           }
         }
       }

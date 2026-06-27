@@ -105,7 +105,7 @@ enum Theme {
         /// プレイヤー行の名前
         static func rowName(isPad: Bool) -> CGFloat { isPad ? 30 : 20 }
         /// プレイヤー行のスコア
-        static func rowScore(isPad: Bool) -> CGFloat { isPad ? 52 : 32 }
+        static func rowScore(isPad: Bool) -> CGFloat { isPad ? 68 : 44 }
         /// キーパッド数字
         static func keypadDigit(isPad: Bool) -> CGFloat { isPad ? 52 : 32 }
         /// キーパッドミス/取消テキスト
