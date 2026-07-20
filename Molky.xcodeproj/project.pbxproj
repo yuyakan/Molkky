@@ -111,13 +111,16 @@
 				cs,
 				de,
 				en,
+				es,
 				et,
 				fi,
 				fr,
 				it,
 				ja,
+				nl,
 				pl,
 				sv,
+				"zh-Hant",
 				Base,
 			);
 			mainGroup = 4BEDE8A22FD6C5AD0043DFA6;

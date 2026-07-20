@@ -1,95 +1,113 @@
 {
-  "sourceLanguage" : "ja",
-  "strings" : {
-    "CFBundleDisplayName" : {
-      "comment" : "Bundle display name",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "MÖLKKY."
+  "sourceLanguage": "ja",
+  "strings": {
+    "CFBundleDisplayName": {
+      "comment": "Bundle display name",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "MÖLKKY."
           }
         }
       }
     },
-    "CFBundleName" : {
-      "comment" : "Bundle name",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Molky"
+    "CFBundleName": {
+      "comment": "Bundle name",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Molky"
           }
         }
       }
     },
-    "NSUserTrackingUsageDescription" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "cs" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Používá se k zobrazování relevantnějších reklam."
+    "NSUserTrackingUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Používá se k zobrazování relevantnějších reklam."
           }
         },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wird verwendet, um Ihnen relevantere Werbung anzuzeigen."
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wird verwendet, um Ihnen relevantere Werbung anzuzeigen."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Used to show you more relevant ads."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Used to show you more relevant ads."
           }
         },
-        "et" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kasutatakse teile asjakohasemate reklaamide kuvamiseks."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se usa para mostrarte anuncios más relevantes."
           }
         },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Käytetään sinulle osuvampien mainosten näyttämiseen."
+        "et": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kasutatakse teile asjakohasemate reklaamide kuvamiseks."
           }
         },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilisé pour vous proposer des publicités plus pertinentes."
+        "fi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Käytetään sinulle osuvampien mainosten näyttämiseen."
           }
         },
-        "it" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilizzato per mostrarti annunci più pertinenti."
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisé pour vous proposer des publicités plus pertinentes."
           }
         },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "あなたに関連性の高い広告を表示するために使用します。"
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilizzato per mostrarti annunci più pertinenti."
           }
         },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Służy do wyświetlania bardziej trafnych reklam."
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "あなたに関連性の高い広告を表示するために使用します。"
           }
         },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Används för att visa mer relevanta annonser för dig."
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wordt gebruikt om je relevantere advertenties te tonen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Służy do wyświetlania bardziej trafnych reklam."
+          }
+        },
+        "sv": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Används för att visa mer relevanta annonser för dig."
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用於向你顯示更相關的廣告。"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }
