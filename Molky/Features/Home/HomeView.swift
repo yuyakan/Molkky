@@ -22,6 +22,10 @@ struct HomeView: View {
             }
             .toolbar(.hidden, for: .navigationBar)
         }
+        .task {
+            // 画面表示後に UMP 同意 → ATT → 広告初期化の順で一度だけ実行する。
+            ConsentManager.shared.startAdvertisingFlow()
+        }
     }
 
     private var phoneBody: some View {

@@ -1,19 +1,29 @@
 import SwiftUI
 import UserMessagingPlatform
+import AppTrackingTransparency
+import GoogleMobileAds
 
-/// GDPR（EEA・英国・スイス）向けの同意取得を管理する。
+/// 広告表示の前段となる「同意」まわりを一手に管理する。
 ///
-/// Google の UMP（User Messaging Platform）を薄くラップし、
-/// - アプリ起動時に同意状況を更新し、必要なら同意フォームを表示する
-/// - 設定画面から「プライバシー設定」を再表示できるようにする（EU の要件）
-/// を担う。
+/// アプリ起動時に次の順序で実行する（`startAdvertisingFlow()`）:
+///   1. GDPR（EEA/英国/スイス）向けの UMP 同意フォームを必要に応じて表示
+///   2. iOS の ATT（App Tracking Transparency）許可をリクエスト
+///   3. 上記が確定してから Google Mobile Ads SDK を初期化し、広告を先読みする
 ///
-/// 対象地域（EEA/英国/スイス）以外のユーザーには同意フォームは表示されず、
+/// この順序は Google の推奨に従う。ATT は「アプリがアクティブ状態」でないと
+/// ダイアログが出ないため、`MolkyApp.init()` ではなく画面表示後
+/// （`HomeView` の `.task`）から呼ぶこと。
+///
+/// 対象地域（EEA/英国/スイス）以外のユーザーには UMP 同意フォームは表示されず、
 /// `canRequestAds` は true のまま進むため、日本などの体験は従来どおり変わらない。
+/// ATT ダイアログは地域に関わらず（初回のみ）表示される。
 @Observable
 @MainActor
 final class ConsentManager {
     static let shared = ConsentManager()
+
+    /// 広告フローを二重に開始しないためのガード。
+    private var didStartFlow = false
 
     /// テスト時に同意フォームを EEA ユーザーとして強制表示するためのフラグ。
     /// - true:  地域を EEA に偽装して常に同意フォームの挙動を確認できる（開発用）
@@ -40,10 +50,42 @@ final class ConsentManager {
         ConsentInformation.shared.privacyOptionsRequirementStatus == .required
     }
 
-    /// アプリ起動時に呼ぶ。同意状況を更新し、必要であれば同意フォームを提示する。
+    /// アプリ起動後（画面表示後）に一度だけ呼ぶ。
+    /// UMP 同意 → ATT 許可 → 広告 SDK 初期化・先読み、の順に実行する。
+    /// ATT ダイアログはアプリがアクティブ状態でないと出ないため、
+    /// `HomeView` の `.task` など画面表示後のタイミングから呼ぶこと。
+    func startAdvertisingFlow() {
+        guard !didStartFlow else { return }
+        didStartFlow = true
+
+        gatherConsentIfNeeded { [weak self] in
+            // UMP 同意が確定してから ATT を要求し、その完了後に広告を初期化する。
+            self?.requestTrackingThenStartAds()
+        }
+    }
+
+    /// ATT（App Tracking Transparency）の許可をリクエストし、
+    /// 結果に関わらず（許可・拒否とも）広告 SDK の初期化へ進む。
+    private func requestTrackingThenStartAds() {
+        ATTrackingManager.requestTrackingAuthorization { [weak self] _ in
+            // このコールバックは任意スレッドで来るため、MainActor に戻して続行する。
+            Task { @MainActor in
+                self?.startAdsIfAllowed()
+            }
+        }
+    }
+
+    /// 同意状況が許せば Google Mobile Ads SDK を初期化し、最初の広告を先読みする。
+    private func startAdsIfAllowed() {
+        guard canRequestAds else { return }
+        MobileAds.shared.start { _ in
+            InterstitialAdManager.shared.loadAd()
+        }
+    }
+
+    /// 同意状況を更新し、必要であれば同意フォームを提示する。
     /// 完了（同意取得済み・対象外地域・エラーのいずれか）後に completion を呼ぶ。
-    /// completion 内で広告 SDK の初期化・ロードを行うことを想定している。
-    func gatherConsentIfNeeded(completion: @escaping () -> Void) {
+    private func gatherConsentIfNeeded(completion: @escaping () -> Void) {
         let parameters = RequestParameters()
 
         if Self.useDebugEEA {
