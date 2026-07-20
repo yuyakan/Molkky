@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import StoreKit
 
 struct NewGameView: View {
     @Environment(\.modelContext) private var modelContext
@@ -42,12 +43,12 @@ struct NewGameView: View {
 
     @State private var startedSession: GameSessionStore?
 
-    /// レビュー誘導ダイアログを表示済みかどうか（端末ごとに一度だけ）
-    @AppStorage(ReviewManager.hasShownFirstReviewKey) private var hasShownFirstReview = false
-    /// スタートボタンを押した累計回数（レビューを2回目の押下で出すために永続カウント）
+    /// スタートボタンを押した累計回数。広告（3回目以降の奇数回目）と
+    /// レビュー（偶数回目）の出し分けに使うため永続カウントする。
     @AppStorage("startTapCount") private var startTapCount = 0
-    /// カスタムのレビュー誘導ダイアログの表示状態
-    @State private var showReviewPrompt = false
+
+    /// iOS 標準のレビューリクエスト（OS 側で年3回まで自動制御される）
+    @Environment(\.requestReview) private var requestReview
 
     @Environment(\.horizontalSizeClass) private var hSize
     private var isPad: Bool { hSize == .regular }
@@ -88,27 +89,6 @@ struct NewGameView: View {
                 .navigationBarBackButtonHidden()
         }
         .onAppear { loadDefaultsIfNeeded() }
-        .overlay {
-            if showReviewPrompt {
-                ReviewPromptView(
-                    onWriteReview: {
-                        ReviewManager.openWriteReview()
-                        dismissReviewAndStart()
-                    },
-                    onDismiss: {
-                        dismissReviewAndStart()
-                    }
-                )
-                .transition(.opacity)
-                .zIndex(1)
-            }
-        }
-    }
-
-    /// レビュー誘導ダイアログを閉じてゲームを開始する。
-    private func dismissReviewAndStart() {
-        showReviewPrompt = false
-        start()
     }
 
     // MARK: - iPhone レイアウト
@@ -593,16 +573,20 @@ struct NewGameView: View {
     private var startButton: some View {
         Button {
             startTapCount += 1
-            if startTapCount == 2 && !hasShownFirstReview {
-                // スタート押下の2回目に、まだ未表示ならカスタムのレビュー誘導を表示する
-                hasShownFirstReview = true
-                showReviewPrompt = true
-            } else {
-                // それ以外は対戦画面へ遷移する前にインタースティシャル広告を表示し、
-                // 閉じられた（または広告が無かった）あとにゲームを開始する
+            if startTapCount >= 2 && startTapCount % 2 == 0 {
+                // 偶数回目（2,4,6…）: iOS 標準のレビューリクエストを出す（表示回数は OS が制御）。
+                // 広告とは別の回に分けるため、ここでは広告を出さずにゲームを開始する。
+                requestReview()
+                start()
+            } else if startTapCount >= 3 {
+                // 3回目以降の奇数回目（3,5,7…）: 対戦画面へ遷移する前に
+                // インタースティシャル広告を表示し、閉じたあと（または広告が無ければ即）ゲームを開始する。
                 InterstitialAdManager.shared.showAd {
                     start()
                 }
+            } else {
+                // 1回目: 広告もレビューも出さずにそのまま開始する
+                start()
             }
         } label: {
             HStack(spacing: Theme.Space.s) {

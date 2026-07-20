@@ -9,6 +9,11 @@ struct SettingsView: View {
     @Environment(\.horizontalSizeClass) private var hSize
     private var isPad: Bool { hSize == .regular }
 
+    /// GDPR 同意フォームを再提示できる地域（EEA など）でのみ「プライバシー設定」を表示する。
+    private var showsPrivacyOptions: Bool {
+        ConsentManager.shared.isPrivacyOptionsRequired
+    }
+
     private var defaultMissPolicy: MissPolicy {
         MissPolicy(rawValue: defaultMissPolicyRaw) ?? .eliminate
     }
@@ -19,6 +24,9 @@ struct SettingsView: View {
             ScrollView {
                 VStack(spacing: Theme.Space.l) {
                     defaultRulesCard
+                    if showsPrivacyOptions {
+                        privacyCard
+                    }
                     aboutCard
                 }
                 .padding(.horizontal, isPad ? Theme.Space.xxl : Theme.Space.l)
@@ -78,6 +86,34 @@ struct SettingsView: View {
                     .multilineTextAlignment(.center)
             }
             .frame(maxWidth: .infinity)
+        }
+    }
+
+    private var privacyCard: some View {
+        TicketCard(accent: Theme.sky) {
+            VStack(alignment: .leading, spacing: Theme.Space.m) {
+                SectionHeader(number: 2, title: "プライバシー")
+                Button {
+                    ConsentManager.shared.presentPrivacyOptions()
+                } label: {
+                    HStack(spacing: Theme.Space.s) {
+                        Image(systemName: "hand.raised.fill")
+                            .foregroundStyle(Theme.sky)
+                            .frame(width: 22)
+                        Text("プライバシー設定")
+                            .font(.system(.subheadline, design: .rounded).weight(.bold))
+                            .foregroundStyle(Theme.ink)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption.weight(.bold))
+                            .foregroundStyle(Theme.textSecondary)
+                    }
+                }
+                .buttonStyle(PressableButtonStyle())
+                Text("広告に関する同意の設定を変更できます。")
+                    .font(.caption)
+                    .foregroundStyle(Theme.textSecondary)
+            }
         }
     }
 

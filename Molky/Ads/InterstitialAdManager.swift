@@ -31,21 +31,16 @@ final class InterstitialAdManager: NSObject, FullScreenContentDelegate {
     private var interstitial: InterstitialAd?
     private var isLoading = false
 
-    /// 広告の表示頻度を制御するためのカウンタと時刻。
-    /// 「2回に1回」かつ「前回表示から90秒以上経過」の両方を満たしたときだけ表示する。
-    private var showRequestCount = 0
+    /// 前回広告を表示した時刻。表示間隔の制御に使う。
     private var lastShownAt: Date?
 
     /// 最低限あけるインターバル（秒）。
     private static let minimumInterval: TimeInterval = 90
 
     /// 今回の表示要求で広告を出してよいかを判定する。
-    /// 偶数回目（2回に1回）かつ前回表示から90秒以上経過していれば true。
+    /// 「どの回で広告を出すか」（奇数回目など）の振り分けは呼び出し側が担い、
+    /// ここでは「前回表示から90秒以上経過しているか」の間隔条件だけを見る。
     private func shouldShowAd() -> Bool {
-        showRequestCount += 1
-        // 2回に1回（2,4,6回目…）のみ表示対象とする
-        guard showRequestCount % 2 == 0 else { return false }
-        // 前回表示から90秒経っていなければ表示しない
         if let lastShownAt, Date().timeIntervalSince(lastShownAt) < Self.minimumInterval {
             return false
         }
@@ -78,7 +73,7 @@ final class InterstitialAdManager: NSObject, FullScreenContentDelegate {
     /// 準備できていない場合は即座に completion を実行し、次回用にロードを開始する。
     @MainActor
     func showAd(completion: @escaping () -> Void) {
-        // 表示頻度の条件（2回に1回・前回から90秒以上）を満たさなければ表示しない
+        // 表示間隔の条件（前回から90秒以上）を満たさなければ表示しない
         guard shouldShowAd() else {
             completion()
             return

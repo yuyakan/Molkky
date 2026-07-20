@@ -113,6 +113,7 @@
 				en,
 				et,
 				fi,
+				fr,
 				it,
 				ja,
 				pl,

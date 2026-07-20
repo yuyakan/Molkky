@@ -6,9 +6,14 @@ import GoogleMobileAds
 @main
 struct MolkyApp: App {
     init() {
-        // Google Mobile Ads SDK を初期化し、最初のインタースティシャル広告を先読みする
-        MobileAds.shared.start { _ in
-            InterstitialAdManager.shared.loadAd()
+        // まず GDPR（EEA・英国・スイス）向けの同意を取得する。
+        // 同意が確定（または対象外地域）してから広告 SDK を初期化・先読みすることで、
+        // 同意なしに広告データ処理が始まらないようにする。
+        ConsentManager.shared.gatherConsentIfNeeded {
+            guard ConsentManager.shared.canRequestAds else { return }
+            MobileAds.shared.start { _ in
+                InterstitialAdManager.shared.loadAd()
+            }
         }
     }
 
