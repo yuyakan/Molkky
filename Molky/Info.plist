@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDisplayName</key>
 	<string>MÖLKKY.</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-3155724310732667~8195260762</string>
 	<key>NSUserTrackingUsageDescription</key>

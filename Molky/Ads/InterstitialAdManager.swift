@@ -15,7 +15,7 @@ final class InterstitialAdManager: NSObject, FullScreenContentDelegate {
     /// なお Info.plist の GADApplicationIdentifier も合わせて切り替えること:
     /// - テスト用アプリID: ca-app-pub-3940256099942544~1458002511
     /// - 本番用アプリID:   ca-app-pub-3155724310732667~8195260762
-    static let useTestAds = false
+    static let useTestAds = true
 
     /// Google 公式のテスト用インタースティシャル広告ユニットID。
     private static let testAdUnitID = "ca-app-pub-3940256099942544/4411468910"
