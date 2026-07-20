@@ -156,10 +156,12 @@ struct Keypad: View {
                     .font(isPad ? .title2.bold() : .headline.bold())
                 Text("取消")
                     .font(.system(size: actionTextSize - 4, weight: .heavy, design: .rounded))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
             .foregroundStyle(Theme.birch)
         }
-        .frame(width: isPad ? 140 : 100, height: actionHeight)
+        .frame(width: isPad ? 160 : 120, height: actionHeight)
         .shadow(color: Theme.ink.opacity(0.22), radius: isPad ? 10 : 6, y: isPad ? 5 : 3)
     }
 }

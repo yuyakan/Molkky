@@ -6802,7 +6802,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Cancelar"
+            "value": "Deshacer"
           }
         },
         "et": {
@@ -6832,7 +6832,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Annuleren"
+            "value": "Ongedaan"
           }
         },
         "pl": {
@@ -7592,7 +7592,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Geschiedenis"
+            "value": "Historie"
           }
         },
         "pl": {
@@ -7942,7 +7942,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reanudar"
+            "value": "Presente"
           }
         },
         "et": {
@@ -7960,7 +7960,7 @@
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reprendre"
+            "value": "Présent"
           }
         },
         "it": {
@@ -7972,7 +7972,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hervatten"
+            "value": "Aanwezig"
           }
         },
         "pl": {
@@ -7990,7 +7990,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "繼續"
+            "value": "出席"
           }
         }
       }
@@ -9158,7 +9158,7 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sin registrar"
+            "value": "Temporal"
           }
         },
         "et": {
@@ -9176,7 +9176,7 @@
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Non enregistré"
+            "value": "Temporaire"
           }
         },
         "it": {
@@ -9188,7 +9188,7 @@
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Niet geregistreerd"
+            "value": "Tijdelijk"
           }
         },
         "pl": {
@@ -9206,7 +9206,7 @@
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "未登錄"
+            "value": "臨時"
           }
         }
       }
